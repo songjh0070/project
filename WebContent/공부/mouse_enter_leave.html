@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script src="../js/jquery-3.6.0.min.js"></script>
+	<style>
+		*{
+			margin : 0;
+			padding : 0;
+		}
+		
+		.mouse_enter{
+			width : 300px;
+			height : 200px;
+			border:1px solid #000;
+			text-align : center;
+			line-height : 200px;
+		}
+	</style>
+
+<body>
+	<div class= "mouse_enter">
+		<p>Hello</p>
+	</div>
+	
+	<script>
+		$('.mouse_enter').mouseenter(function(){
+			$('.mouse_enter p').text('mouse is entered');
+		});
+		
+		$('.mouse_enter').mouseleave(function(){
+			$('.mouse_enter p').text('mouse is left')
+		});
+	</script>
+</body>
+</html>

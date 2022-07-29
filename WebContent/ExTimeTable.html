@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.title{
+		font-size:15px;
+		text-align:center;
+	}
+	.timeTable {
+		border-collapse:collapse;
+		border:1px solid black;
+		margin:0 auto;
+		font-size:10pt;
+	}
+/* 	tr {
+		background:blue;
+		color:white;
+	} */
+	.timeTable th {
+		background-color:#003399;
+		color:white;
+		width:140px;
+		height:16px;
+	}
+	.timeTable th:first-child {
+		width:70px;
+	}
+	.timeTable th, .timeTable td {
+		border:2px solid black;
+		text-align:center;
+	}
+	.timeTable td {
+		font-size:9pt;
+	}
+</style>
+<script src="timetable.js"></script>
+</head>
+<body>
+	<div class="title">2021학년도 2학기 1학년 시간표</div>
+	
+	<table class="timeTable">
+	<script> 
+		var week = ['월', '화', '수', '목', '금'];
+		for(var i=0; i<=16; i++) {
+			document.write("<tr>");
+			if(i==0) {
+				for(var j=0; j<=5; j++) {
+					if(j==0) 
+						document.write("<th>시간</th>");
+					else {
+						document.write("<th>"+week[j-1]+"</th>");
+					}
+				}
+			} else {
+				for(var j=0; j<=5; j++) {
+					if(j==0) {
+						document.write("<td>"+timetable[i-1]+"</td>");
+					} else {
+						// 1.기본.
+ 						var idx = 0;
+						for(var k=0; k<=9; k++) {
+							if(subjects[k] == arr[i-1][j-1]) {
+								idx = k;
+								break;
+							}
+						}
+						if(arr[i-1][j-1]!==undefined)
+							document.write("<td style='background-color:"+colors[idx]+"'>"+arr[i-1][j-1]+"</td>");
+						else
+							document.write("<td></td>");
+
+						
+ 						// 2.고급.
+/* 						if(arr[i-1][j-1] === undefined) document.write("<td></td>");
+						else {
+							if(arr[i-1][j-1]!==undefined && i>=2 && (arr[i-1][j-1] == arr[i-2][j-1])) { }
+							else {
+								var idx = 0;
+								var rowspan = 0;
+								for(var k=0; k<=9; k++) {
+									if(subjects[k] == arr[i-1][j-1]) {
+										idx = k;
+										break;
+									}
+								}
+								
+								var rowspan = 1;
+	 							for(var k=1; k<=3; k++) {
+									if(arr[i-1][j-1]==arr[i-1+k][j-1]) rowspan++;
+									else break;
+								}
+	 							
+								if(rowspan==1)
+									document.write("<td style='background-color:"+colors[idx]+"'>"+arr[i-1][j-1]+"</td>");
+								else 
+									document.write("<td rowspan='"+rowspan+"' style='background-color:"+colors[idx]+"'>"+arr[i-1][j-1]+"</td>");
+							}
+						}
+ */
+ 					}
+				}				
+			}
+			document.write("</tr>");
+		}
+	
+	</script>
+	</table>
+</body>
+</html>

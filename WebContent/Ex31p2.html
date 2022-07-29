@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		function getUrlParams() {
+		    var params = {};
+		    
+		    window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+		    	function(str, key, value) {
+		        	params[key] = value;
+		        }
+		    );
+		    
+		    return params;
+		}
+		
+		params = getUrlParams();
+		str = decodeURI(params.str).split("").reverse().join("");
+		//alert("str : " + params.str.split("").reverse().join(""));
+		document.write("<h1>문자열 : " + decodeURI(params.str) + "</h1>");
+		document.write("<h1>뒤집은 문자열 : " + str + "</h1>");
+	</script>
+</head>
+<body>
+		
+		
+		
+</body>
+</html>

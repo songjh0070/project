@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+	function multiply(){
+		/* var num1 = document.getElementById("n1").value; */
+		/* var num2 = document.getElementById("n2").value; */
+		var num1 =$("#n1").val();	/* jquery 셀렉터 body 안에 것들을 찝어 낼때 사용 */
+		var num2 = Number($("#n2").val());
+		$("#result").val(num1*num2);
+	}
+	
+	$(function() {
+		
+		$("#btn_mul").click(function(){
+			var num1 = Number($("#n1").val());
+			var num2 = Number($("#n2").val());
+			var mul = num1*num2;
+			$("#result").val(mul);
+		});	
+					// 클릭 이벤트 핸들러를 #btn_mul에 부착!
+	});
+</script>
+</head>
+
+<body>
+	num1 : <input type="text" id="n1"> <br/>
+	num2 : <input type ="text" id ="n2"/> <br/>
+<!--<button onclick="multiply()">곱하기</button>	<br/> -->
+	<button id="btn_mul">곱하기</button><br/>
+	result : <input type = "text" id="result"/>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.6.0.min.js"></script>
+	<script>
+		
+		function qty(){
+			
+			$(".qty").val("0");
+			
+		};
+	
+		$(function(){
+			
+			$("#btn_p").click(function(){
+				
+				$(".qty").val( Number($(".qty")) +1);
+				
+			});
+			
+		});
+		
+	</script>
+
+	<style>
+		body > div {
+			width:528px;
+			margin:0 auto;
+		}
+		
+		table {
+			border-collapse: collapse;
+			table-layout: fixed;
+		}
+		
+		table, td {
+			border: 2px solid grey;
+			text-align: center;
+		}
+		
+		table td:nth-child(1) {
+			width:210px;
+		}
+		
+		table td:not(:nth-child(1)) {
+			width:100px;
+		}
+		
+		td > img {
+			width:200px;
+		}
+		
+		.qty {
+			width:30px;
+		}
+		
+		div > p {
+			text-align: right;
+		}
+		
+	</style>
+		
+		
+	
+</head>
+
+<body>
+	<div>
+		<table>
+		
+			<tr>
+				<td>품목</td>
+				<td>단가</td>
+				<td>수량</td>
+				<td>가격</td>
+			</tr>
+			
+			<tr>
+				<td><img src="Images/참깨라면1000.png">
+				<td class="cham_price">1000<span>원</span></td>
+				<td>
+					<button id = "btn_p">+</button>
+					<input type ="text" class = "qty"/>
+					<button id = "btn_m">-</button>
+				</td>
+				<td><input id = "cham_total" value = "0">원</td>			
+			</tr>
+			
+			<tr>
+				<td><img src="Images/햇반600.png"></td>
+				<td class = "hat_price">600<span>원</span></td>
+				<td>
+					<button id = "btn_p">+</button>
+					<input type ="text" class = "qty" value="0"/>
+					<button id = "btn_m">-</button>
+				</td>
+				<td><input id = "hat_total" value="0">원</td>
+			</tr>
+			
+			<tr>
+				<td><img src="Images/수미칩1600.png">
+				<td class = "sumi_price">1600<span>원</span></td>
+				<td>
+					<button id = "btn_p">+</button>
+					<input type ="text" class = "qty" value = "0"/>
+					<button id = "btn_m">-</button>
+				</td>
+				<td><input id = "sumi_total" value="0">원</td>
+			</tr>
+			
+		</table>
+	</div>
+</body>
+</html>

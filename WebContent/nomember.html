@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+<title>Insert title here</title>
+<style>
+.div1 {
+	font-size: 25px;
+	font-weight: 700;
+}
+
+.div2 {
+	width: 888px;
+	font-size: 16px;
+	font-weight: 700;
+	display: inline-block;
+	margin-top: 2%;
+	padding-top: 2%;
+	border-top: solid 1px;
+}
+
+.div3 {
+	margin-top: 2%;
+}
+
+.div4 {
+	width: 888px;
+	font-size: 16px;
+	font-weight: 700;
+	display: inline-block;
+	margin-top: 2%;
+	padding-top: 2%;
+	border-top: solid 1px;
+}
+
+.div5 {
+	width: 888px;
+	height: 40px;
+	font-size: 16px;
+	font-weight: 700;
+	display: inline-block;
+	margin-top: 2%;
+	border: solid 1px;
+	background: #93a0b5;
+}
+
+.div6 {
+	width: 888px;
+	height: 270px;
+	margin-top: -5px;
+	border: solid 1px;
+}
+
+.div7 {
+	padding: 11px 15px;
+	border-radius: 4px;
+	background: #f5f5f5;
+	margin-top: 12px;
+	margin-left: 20px;
+	margin-right: 20px;
+	height: 25px;
+}
+
+.div8 {
+	text-align: center;
+	height: 175px;
+	margin-top: 100px;
+}
+
+.div9 {
+	width: 888px;
+	font-size: 16px;
+	font-weight: 700;
+	display: inline-block;
+	margin-top: 2%;
+	padding-top: 2%;
+	border-top: solid 1px;
+}
+
+.div10 {
+	float: left;
+	margin-top: 50px;
+	padding-top: 20px;
+	width: 100px;
+}
+
+.div11 {
+	display: inline-block;
+	margin-left: 200px;
+	margin-top: 50px;
+	width: 100px;
+}
+
+.div12 {
+	float: left;
+	margin-top: 50px;
+}
+
+.div13 {
+	display: inline-block;
+	margin-left: 243px;
+}
+
+.div14 {
+	border: 1px solid;
+	width: 569px;
+	height: 230px;
+	margin-left: 300px;
+	background: #f7f7f7;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.div15 {
+	margin-top: 60px;
+	margin-right: 5px;
+}
+
+.div16 {
+	margin-top: 10px;
+	margin-right: 5px;
+}
+
+.div17 {
+	margin-top: 10px;
+}
+
+.a {
+	width: 100%;
+}
+
+.a:after {
+	display: inline-block;
+	content: "";
+	margin-top: 5px;
+	margin-left: 2px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	vertical-align: top;
+	background: #FF6001;
+}
+
+.a2 {
+	display: inline-block;
+	position: relative;
+	margin-left: 13px;
+	top: 7px;
+	background: transparent;
+	text-decoration: none;
+	color: inherit;
+}
+
+.a3 {
+	font-size: 18px;
+	color: #333;
+	font-weight: 700;
+	float: right;
+	margin-top: -20px;
+	margin-right: 25px;
+}
+
+.a4 {
+	font-weight: normal;
+	font-size: 14px;
+}
+
+td {
+	padding: 5px;
+}
+
+.td1 {
+	border: 1px solid;
+	width: 177px;
+	height: 46px;
+	text-align: center;
+}
+
+.input-text1 {
+	height: 40px;
+	width: 800px;
+	padding: 5px 15px;
+	background: #fff;
+	color: #333;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	font-size: 13px;
+	border-radius: 0;
+}
+
+.input-text2 {
+	height: 40px;
+	width: 680px;
+	padding: 5px 15px;
+	background: #fff;
+	color: #333;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	font-size: 13px;
+	border-radius: 0;
+}
+
+.input-text3 {
+	height: 40px;
+	width: 800px;
+	padding: 5px 15px;
+	background: #fff;
+	color: #333;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	font-size: 13px;
+	border-radius: 0;
+}
+
+.select-box {
+	position: relative;
+	height: 40px;
+	width: 120px;
+	padding: 0 36px 0 15px;
+	border: 1px solid #ccc;
+	font-size: 14px;
+	color: #333;
+	box-sizing: border-box;
+	background: #fff;
+}
+
+.select-box2 {
+	position: relative;
+	height: 40px;
+	width: 299px;
+	padding: 0 36px 0 15px;
+	border: 1px solid #ccc;
+	font-size: 14px;
+	color: #333;
+	box-sizing: border-box;
+	background: #fff;
+	margin-left: 20px;
+}
+
+.button1 {
+	background: #eef7ff;
+	color: #3c89fd;
+	border: 1px solid #3c89fd;
+	border-radius: 20px;
+	width: 130px;
+	height: 40px;
+}
+
+.button2 {
+	width: 190px;
+	height: 60px;
+	background: white;
+}
+
+.button3 {
+	background: #fff;
+	color: #333;
+	border: 1px solid #666;
+	width: 375px;
+	height: 40px;
+}
+
+.span1 {
+	color: #fff;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.sapn2 {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.floating1 {
+	position: fixed;
+    right: 50%;
+    top: 63px;
+    margin-right: -5px;
+    text-align: center;
+    width: 70px;
+}
+</style>
+</head>
+<body>
+	<div>
+		<div class="div1">주문/결제</div>
+		<div class="div2">주문자 정보</div>
+		<div class="div3">
+			<table>
+				<tr>
+					<td><a class="a">이름</a></td>
+					<td><div class="table-div-size">
+							<input type="text" name="name" class="input-text1">
+						</div></td>
+				</tr>
+				<tr>
+					<td><a class="a">휴대전화</a></td>
+					<td><div class="table-div-size">
+							<select class="select-box"><option value="010">010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+								<option value="019">019</option></select><input type="text" name="name"
+								class="input-text2">
+						</div></td>
+				</tr>
+				<tr>
+					<td><a class="a">이메일</a></td>
+					<td><div class="table-div-size">
+							<input type="text" name="name" class="input-text3">
+						</div></td>
+				</tr>
+			</table>
+		</div>
+		<div class="div4">
+			배송지 정보 <span style="margin-left: 630px;"><input
+				type="checkbox" id="checkbox1" style="accent-color: #ff6001">
+				<label for="checkbox1" class="cb1"></label>주문자 정보와 동일</span>
+		</div>
+		<div class="div3">
+			<table>
+				<tr>
+					<td><a class="a">받는분</a></td>
+					<td><div class="table-div-size">
+							<input type="text" name="name" class="input-text1">
+						</div></td>
+				</tr>
+				<tr>
+					<td><a class="a">주소</a></td>
+					<td><div class="table-div-size">
+							<input type="text" name="name" class="input-text1">
+						</div>
+						<div class="table-div-size">
+							<input type="text" name="name" class="input-text1"
+								style="margin-top: 10px;">
+						</div></td>
+				</tr>
+				<tr>
+					<td><a class="a">휴대전화</a></td>
+					<td><div class="table-div-size">
+							<select class="select-box"><option value="010">010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+								<option value="019">019</option></select><input type="text" name="name"
+								class="input-text2">
+						</div></td>
+				</tr>
+				<tr>
+					<td><a>전화번호</a></td>
+					<td><div class="table-div-size">
+							<input type="text" name="name" class="input-text3">
+						</div></td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<div class="div5">
+				<span class="span1"
+					style="margin-left: 30px; float: left; margin-top: 10px;">주문상품
+					1개</span> <span class="span1"
+					style="float: right; margin-right: 30px; margin-top: 10px;">무료배송</span>
+			</div>
+			<div class="div6">
+				<div class="div7">
+					<p style="color: #666; font-size: 13px; margin-top: 3px;">무료배송</p>
+				</div>
+				<div>
+					<div>
+						<div>
+							<img src="images/다리우스.png"
+								style="float: left; margin-top: 10px; margin-left: 20px;">
+							<div>
+								<a class="a2"> 다리우스 150g X 10팩<br>24,900원 · 1개
+								</a>
+							</div>
+							<div>
+								<a class="a3"> 24,900원 </a>
+							</div>
+							<div class="div8">
+								<a class="a4"><button type="button"
+										onclick="location.href='https://www.rankingdak.com/'"
+										class="button1">보냉제 더 담기</button></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="div9">
+			<a>결제방법</a>
+		</div>
+		<div class="floating1">
+		<ul>
+			<li><a><img
+					src="https://file.rankingdak.com/image/RANK/BANNER/AR_IMG_1/20220415/IMG1649yLT990418857.jpg"></a>
+			</li>
+			<li><a
+				href="https://www.rankingdak.com/product/list?depth1=R031&depth2=R176"><img
+					src="https://file.rankingdak.com/image/RANK/BANNER/AR_IMG_1/20220415/IMG1649qNQ990477069.jpg"></a>
+			</li>
+		</ul>
+	</div>
+	
+	</div>
+	<div class="div10">
+		<a class="a4">간편결제</a>
+	</div>
+	<div class="div11">
+		<span><button class="button2" type="button">
+				<img src="images/랭킹카드.PNG" alt="" style="width: 100%;">
+			</button></span>
+	</div>
+	<div>
+		<div class="div12">
+			<a class="a4">일반결제</a>
+		</div>
+		<div class="div13">
+			<table style="margin-top: 35px;">
+				<tr>
+					<td class="td1">신용카드</td>
+					<td class="td1">무통장입금</td>
+					<td class="td1">실시간계좌이체</td>
+				</tr>
+				<tr>
+					<td class="td1">휴대폰결제</td>
+					<td class="td1">카카오페이</td>
+					<td class="td1">네이버페이</td>
+				</tr>
+				<tr>
+					<td class="td1">토스</td>
+					<td class="td1">페이코</td>
+					<td class="td1">심플페이</td>
+				</tr>
+			</table>
+		</div>
+		<div class="div14">
+			<div class="div15">
+				<span class="sapn2">카드선택</span> <span><select
+					class="select-box2"><option value="카드사">[필수] 카드사를
+							선택하세요.</option>
+						<option value="신한카드">신한카드</option>
+						<option value="현대카드">현대카드</option>
+						<option value="삼성카드">삼성카드</option>
+						<option value="KB국민카드">KB국민카드</option>
+						<option value="우리카드">우리카드</option>
+						<option value="롯데카드">롯데카드</option>
+						<option value="NH농협카드">NH농협카드</option>
+						<option value="하나카드">하나카드</option>
+						<option value="비씨카드">비씨카드</option>
+						<option value="씨티카드">씨티카드</option>
+						<option value="카카오뱅크">카카오뱅크</option>
+						<option value="KDB산업은행">KDB산업은행</option>
+						<option value="Sh수협은행">Sh수협은행</option>
+						<option value="전북은행">전북은행</option>
+						<option value="제주은행">제주은행</option>
+						<option value="광주은행">광주은행</option>
+						<option value="신협">신협</option>
+				</select></span>
+			</div>
+			<div class="div16">
+				<span class="sapn2">할부선택</span> <span><select
+					class="select-box2"><option value="할부">일시불</option>
+						<option value="1munth">1개월</option>
+						<option value="2munth">2개월</option>
+						<option value="3munth">3개월</option>
+						<option value="4munth">4개월</option>
+						<option value="5munth">5개월</option>
+						<option value="6munth">6개월</option>
+				</select></span>
+			</div>
+			<div class="div17">
+				<span class="sapn2"><button class="button3" type="button">무이자
+						환불 안내</button></span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css"
+	href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'>
+<title>마이 페이지</title>
+	
+	<style>
+		
+		*{
+			text-decoration: none;
+			margin: 0px;
+		}
+		
+		dt{
+			margin :0px;
+		}
+		
+		.all_area{
+			position: relative;
+			width: 1300px;
+			height: 1920px;
+		}		
+		
+		.container{
+			position: relative;
+			padding-bottom: 100px;
+		}
+		
+		.content_wrap{
+			min-height: 700px;
+		}
+		
+		.mypage_top_area{
+			width: 100%;
+			background: #F7F7F7;
+		}
+		
+		.mypage_top{
+			width: 1100px;
+			margin : 0 auto;
+			background: #F8F8F8;
+			text-align: center;
+			padding: 30px 0;
+		}
+		
+		.contents{
+			display: table;
+			table-layout: auto;
+			width: 100%;
+		}
+		
+		.user_info{
+			width : 590px;
+			height : 130px;
+			position: relative;
+			padding: 25px;
+			border : 0px solid #fff;
+			background: #fff;
+			height : 130px;
+		}
+		
+		.img{
+			padding : 8px;
+			margin-right: 12px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-left : -230px;
+			margin-top :16px;
+		}
+		
+		.ico_cou_level01{
+			background-position: 0 0;
+		}
+		
+		[class*="ico_cou_level"]{
+			display : inline-block;
+			width : 60px; 
+			height : 62px;
+			background:url(Images/ico_cou_level.png)0 0;
+		}
+		
+		.text{
+			display: inline-block;
+			vertical-align: middle;
+			
+		}
+		
+		.welcome{
+			font-size: 20px;
+			font-weight : 400;
+			padding-top: 20px;
+		}
+		
+		.name{
+			font-weight: 700;
+			
+		}
+		
+		strong{
+			font-style:normal;
+		}
+		
+		.rank_point{
+			margin-top: 0px;
+			overflow: hidden;
+			margin-bottom : 0px;
+		}
+		
+		ul li{
+			list-style: none;
+		}
+		
+		li{
+			font-size : 14px;
+			color : #666;
+		}
+		
+		.rank_point li{
+			float : left;
+			margin-top : 10px;
+		}
+		
+		ul {
+			padding-inline-start: 0px;
+		}
+		
+		.point:before{
+			margin-top : -3px;
+			height : 10px;
+			background: #e6e6e6;
+			margin: 2px 10px 0 0;
+			display: inline-block;
+			content : '';
+			width : 1px;
+			height : 10px;
+			vertical-align: middle;
+			margin-left: 10px;
+		}
+		
+		.level_up_tip{
+			float:left;
+		}
+		
+		.membership_benefit{
+			position: absolute;
+			top:50%;
+			right : 35px;
+			transform : translateY(-50%);
+			border : 2px solid #ddd;
+			border-radius: 20px;
+			padding : 5px 15px;
+		}
+		
+		.order{
+			border: 0px solid #F8F8F8;
+			background: #fff;
+			width:170px;
+			height: 130px;
+			display: table-cell;
+			border-left: 4px solid #F8F8F8;
+			
+		}
+		.mycoupon{
+			border: 0px solid #F8F8F8;
+			background: #fff;
+			width:170px;
+			height: 130px;
+			display: table-cell;
+			border-left: 4px solid #F8F8F8;
+			
+			
+		}
+		.mypoint{
+			border: 0px solid #F8F8F8;
+			background: #fff;
+			width:170px;
+			height: 130px;
+			display: table-cell;
+			border-left: 4px solid #F8F8F8;
+			
+		}
+		
+		html, body {/* 헤더 css */
+			height: 100%;
+			color: #333;
+			font-size: 14px;
+			font-weight: 400;
+			/* line-height: 1.4; */
+			font-family: 'Pretendard', sans-serif;
+			word-break: break-all;
+			margin:0,auto;
+	
+		}
+		
+		a {
+			text-decoration: none;
+			color: #404040;
+		}
+		input{
+			padding:3px 15px;
+			border: 1px solid #ccc;
+		}
+		li {
+			list-style: none;
+		}
+		.upimg{
+			width:1300px;
+		}
+		.upimg img{
+			width:650px;
+		}
+
+		.header-inner {
+			width: 1120px;
+			height: 120px;
+			margin-left:100px;
+			border:1px solid white;
+		}
+		
+		.header-inner .rankinglogo {
+			diplay:block-inline;
+			width: 180px;
+			height: 46px;
+			margin-top:37px;
+		}
+		.header-inner .rankinglogo img{
+			margin-top:23px;
+		}
+		.header-inner .headermenu{
+			float:right;
+		}
+		.header-inner .rankingicon{
+			display:inline;
+			width:222px;
+			height:38px;
+			text-align:center;
+			margin-left:920px;
+			margin-top:-43px;
+			float:right;
+			
+		}
+		.header-inner .rankingicon img{
+			margin-left:20px;
+		}
+		#menu1 {
+			width:1300px;
+			background: white;
+			text-align: center;
+			height: 50px;
+			margin-top: auto;
+			margin-left:72px;
+			font-size:17px;
+		}
+
+		#menu ul {
+			overflow: hidden;
+			background: white;
+			margin-right: 50%;
+		}
+		
+		#menu1 ul li {
+			width: 200px;
+			float: left;
+			width: 100px;
+			height: 50px;
+			line-height: 37px;
+			text-align: center;
+			margin-right:42px;
+		}
+		
+		#menu1 ul li a {
+			display: block;
+		}
+		#menu1  a {
+			width:115px;
+		}
+		
+		#menu1 ul li a:hover {
+			background: black;
+			color: white;
+		}
+		
+		#menu1 img {
+			margin-top: 5px;
+		}
+		
+		.search{
+			text-align:center;
+			border:0px solid white;
+		}/* 헤더 */
+		
+		.all_wrap{
+			width : 1300px;
+			margin : 0 auto;
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+<div class = "all_wrap">
+<div class="upimg">
+	<img src="rankingimages/appdown.png" style= margin-top:-7px;>
+	<img src="rankingimages/kakaopay.png" style=float:right;margin-top:-7px;>
+</div>
+	<div class="header-inner">
+			<div class="headermenu">
+			로그인 | 회원가입 | 주문조회 | 고객센터</div>
+			<div class="rankinglogo">
+				<span><img src="rankingimages/ranking_logo.gif"></span></div>
+				<div class="search"><input type="text" placeholder="MD혜택박스 31% 할인"style=border-radius:15px;width:316px;height:20px;background:#f2f2f2;><button id="btnimages" style=margin-left:-33px;margin-top:4px;></button></div>
+				<div class="rankingicon">
+					<img src="rankingimages/couponicon.png"> 
+					<img src="rankingimages/mypageicon.png">
+					<img src="rankingimages/carticon.png">
+			</div>
+		</div>
+	
+		<div id="menu1">
+			<ul>
+			<li><a href="#"><b>전체카테고리</b></a></li>
+			<li style=margin-right:30px;><a href="#"><b>랭킹</b></a></li>
+			<li style=margin-right:30px;><a href="#"><b>이달의 특가</b></a></li>
+			<li style=margin-right:30px;><a href="#"><b>혜택정리</b></a></li>
+			<li style=margin-right:30px;><a href="#"><b>1팩 담기</b></a></li>
+			<li style=margin-right:30px;><a href="#"><b>브랜드관</b></a></li>
+			<li style=margin-right:30px;><a href="#"><b>이벤트</b></a></li>
+			<li><a href="#"><img src="rankingimages/expressmenu.png"></a></li>
+			</ul>
+		</div>
+	
+	
+
+	<div class = "all_area">
+		<section id = "contents_area" class = "container">
+			<div class = "content_wrap">
+				<div class= "mypage_top_area">
+					<div class= "mypage_top">
+						<div class= "contents">
+							<div class= "user_info">
+								<span class = "img">
+								<i class="ico_cou_level01"></i>
+								</span>
+								<div class= "text">
+									<p class ="welcome">
+										<strong class = "name">songjh0070</strong>
+										님 반갑습니다.
+									</p>
+									<ul class = "rank_point">
+										<li>
+											<span style="padding: 0 10px 0 0;">닭대리</span>
+										</li>
+										<li class="point">
+											1% 적립
+										</li>
+									</ul>
+									<p class = "level_up_tip" id = "level_up_text">
+										100,000원 더 구매 시, 닭과장 진급!
+									</p>
+								</div>
+								<a href = "https://www.rankingdak.com/mypage/memberBenefitsInfo" class = "membership_benefit">
+									<span style="font-size : 13px;">멤버십 혜택</span>
+								</a>
+							</div><!-- user info -->
+							
+							<dl class = "order">
+								<dt>
+									주문/배송
+								</dt>
+								
+								<dd>
+									<a href = "https://www.rankingdak.com/mypage/orderlist">
+										<strong style = "font-size:28px;">0</strong>
+										건
+									</a>
+								</dd>
+							</dl>
+							<dl class = "mycoupon">
+								<dt>
+									쿠폰
+								</dt>
+								
+								<dd>
+									<a href = "https://www.rankingdak.com/mypage/myCoupon">
+										<strong style = "font-size:28px;">0</strong>
+										개
+									</a>
+								</dd>
+							</dl>
+							<dl class = "mypoint">
+								<dt>
+									포인트
+								</dt>
+								
+								<dd>
+									<a href = "https://www.rankingdak.com/mypage/myPoint">
+										<strong style = "font-size:28px; color: #FF6001;">1,000</strong>
+										P
+									</a>
+								</dd>
+							</dl>
+							
+						</div>
+					</div><!-- MYPAGE_TOP -->
+				</div><!-- mypage_top_area -->
+				
+				<div>
+					
+					
+					
+				</div>
+				
+			</div> <!-- contents wrap -->
+		</section>
+		</div><!-- all wrap -->
+	</div>
+
+</body>
+</html>

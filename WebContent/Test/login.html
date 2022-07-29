@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>메인페이지</title>
+<script src="js/common.js"></script>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<style>
+	
+	.container{
+		width : 1200px;
+		margin : 0 auto;
+	}
+	
+	.header{
+		width : 1200px;
+	}
+	
+	.nav{
+		width : 1200px;
+	}
+	
+	.section{
+		width : 1200px;
+	}
+	
+	.logo{
+		display : inline-block;
+	}
+	
+	.studyroom{
+		display : inline-block;
+	}
+	
+	.logo img{
+		width : 200px;
+		height : 50px;
+	}
+	
+	.logo{
+		vertical-align: top;
+	}
+	
+	.logo_text{
+		vertical-align : top;
+		color : blue;
+		font-size : 18px;
+	}
+	
+	.phone{
+		display : inline-block;
+	}
+	
+	.head_right{
+		float: right;
+	}
+	
+	.head_right input{
+		background-color: #fff;
+		
+	}
+	
+	.study_room{
+		display : inline-block;
+	}
+	
+	.head_menu li{
+		list-style : none;
+		padding-right :0;
+		display : inline;
+		padding : 5px;
+		font-weight: 400;
+		cursor: pointer;
+	}
+	
+	ul{
+		text-align: center;
+	}
+	
+	a{
+		text-decoration: none;
+		color: black;
+	}
+	
+	.head_banner{
+		margin-top : 50px;
+	}
+	
+	.ad_banner_area{	
+		width : 1200px;
+		padding-left :0px;
+	}
+	
+	.ad_banner_area li{
+		list-style : none;
+		display : inline;
+		padding : 5px;
+	}
+	
+	ul.ad_banner_area img{
+    	width: auto;
+    	height: 223px;
+    	margin-top : 50px;
+	}
+	
+	#footer{
+		background-color:black;
+		margin-top : 100px;
+		width : 1200px;
+	}
+	
+	.foot_img{
+		padding : 20px 10px 30px 30px;
+	 	display : inline-block;
+	}
+	
+	.foot_text1{
+		display : inline-block;
+		color : #fff;
+	}
+	
+	.foot_text2{
+		display : inline-block;
+		color : #fff;
+		vertical-align: top;
+		float : right;
+	}
+	
+	.section{
+		margin-top : 50px;
+		margin : 0 auto;
+	}
+	
+</style>
+</head>
+<body>
+	<div class="container">
+
+			<!-- 회사로고 / 스터디룸 / 로그인 버튼 등 -->
+		<div id="header">
+		
+			<div class = "logo"><img src="../Images/Test_img/Test/logo.png"><span class ="logo_text">교육브랜드4년연속대상</span></div>
+			<div class = "head_right">	
+				<form class = "study_room" action = "http://koreastudyroom.com/login_stu.asp"><input type = "submit" value="스터디룸"/></form>
+				<input type = "submit" value="로그인"/>
+				<input type = "submit" value="회원가입"/>
+				<div class = "phone">문의전화 010-5595-9500</div>
+			</div>
+		</div>
+
+		<div id="nav"><!-- 메인페이지 상단 메뉴 -->
+
+			<ul class = "head_menu">
+				<li class = "menu"><strong>아카데미소개</strong></li>
+				<li class = "menu"><strong>IT 교육과정</strong></li>
+				<li class = "menu"><strong>국비지원 과정</strong></li>
+				<li class = "menu"><strong>커뮤니티</strong></li>
+				<li class = "menu"><strong>프로젝트</strong></li>
+				<li class = "menu"><strong>취업지원센터</strong></li>
+				<li class = "menu"><strong>고객상담센터</strong></li>
+			</ul>
+
+		</div>
+		
+		<script>
+			$(function(){
+				$(".menu").click(function(){
+					alert("준비중입니다");
+				});
+			});
+		</script>
+		
+		<div class="section">
+			
+			<img src =" ../Images/Test_img/Test/logo.png">
+			
+			<form action="Q1.html">
+				<input style = "width :300px; height : 30px;" type="text" placeholder="아이디" name="id"required/><br/>
+				<input style = "width :280px; height : 30px; margin-top:5px; margin-bottom : 5px;" type="password" placeholder="비밀번호" name="pw"required/><br/>
+				<input style = "width :260px; height : 30px;" type="submit" value="로그인"/>
+			</form>
+			
+		</div>
+		<div class="section">
+		
+		</div>
+		
+	</div>
+	
+	<div id="footer"><!-- 대표자 / 개인정보책임자 및 전국지점안내 등 -->
+			<div class = "foot_img">
+				<img src = "../Images/Test_img/Test/footer.jpg">
+			</div>
+			
+			<div class = "foot_text1">
+			
+					<p>대표자 : YG 개인정보책임자 : YG<br/>
+					
+						교육담당: 교육상담실<br/>
+					
+						Email : yg.it.yg@korea.com<br/>
+						사업자번호 : 888-76-54321<br/>
+					
+						통신판매업번호 : 2021 - 서울마포 - 01234호<br/>
+					
+						학원등록번호 : 제12345호
+					</p>
+			</div>
+			
+			<div class = "foot_text2">
+				전국지점안내 <br/>
+
+				강남지점1관 : 서울특별시 강남구 테헤란로 146 현익빌딩 3층,4층<br/>
+				
+				강남지점2관 : 서울특별시 강남구 테헤란로 26길 12 제일비전타워 13층<br/>
+				
+				신촌지점 : 서울특별시 마포구 서강로 136 아이비티워 2층,3층<br/>
+				
+				대구지점 : 대구광역시 중구 중앙대로 366 반월센트럴타워 9층,10층<br/>
+				
+				부산지점 : 부산광역시 부산진구 중앙대로 668, 에이원프라자 4층<br/>
+				
+				인천지점 : 인천광역시 부평구 시장로 7 M.H타워 5층<br/>
+				
+				대전지점 : 대전광역시 서구 둔산로52 미라클빌딩 3층<br/>
+				
+				노원지점 : 서울특별시 노원구 상계로 1길 34 5층<br/>
+			</div>
+		</div>
+</body>
+</html>

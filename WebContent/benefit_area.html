@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'>
+<link rel="shortcut icon" href="Images/favicon.ico">
+<meta charset="UTF-8">
+<title>혜택정리</title>
+</head>
+
+	<style>
+	
+		html, body {/* 헤더 css */
+			height: 100%;
+			color: #333;
+			font-size: 14px;
+			font-weight: 400;
+			/* line-height: 1.4; */
+			font-family: 'Pretendard', sans-serif;
+			word-break: break-all;
+			margin:0,auto;
+		}
+		
+		a {
+			text-decoration: none;
+			color: #404040;
+		}
+		input{
+			padding:3px 15px;
+			border: 1px solid #ccc;
+		}
+		li {
+			list-style: none;
+		}
+		.upimg{
+			width:1300px;
+		}
+		.upimg img{
+			width:650px;
+		}
+
+		.header-inner {
+			width: 1120px;
+			height: 120px;
+			margin-left:100px;
+			border:1px solid white;
+		}
+		
+		.header-inner .rankinglogo {
+			diplay:block-inline;
+			width: 180px;
+			height: 46px;
+			margin-top:37px;
+		}
+		.header-inner .rankinglogo img{
+			margin-top:23px;
+		}
+		.header-inner .headermenu{
+			float:right;
+		}
+		.header-inner .rankingicon{
+			display:inline;
+			width:222px;
+			height:38px;
+			text-align:center;
+			margin-left:920px;
+			margin-top:-43px;
+			float:right;
+			
+		}
+		.header-inner .rankingicon img{
+			margin-left:20px;
+		}
+		#menu1 {
+			width:1300px;
+			background: white;
+			text-align: center;
+			height: 50px;
+			margin-top: auto;
+			margin-left:72px;
+			font-size:17px;
+		}
+
+		#menu ul {
+			overflow: hidden;
+			background: white;
+			margin-right: 50%;
+		}
+		
+		#menu1 ul li {
+			width: 200px;
+			float: left;
+			width: 100px;
+			height: 50px;
+			line-height: 37px;
+			text-align: center;
+			margin-right:42px;
+		}
+		
+		#menu1 ul li a {
+			display: block;
+		}
+		#menu1  a {
+			width:115px;
+		}
+		
+		#menu1 ul li a:hover {
+			background: black;
+			color: white;
+		}
+		
+		#menu1 img {
+			margin-top: 5px;
+		}
+		
+		.search{
+			text-align:center;
+			border:0px solid white;
+		}/* 헤더 */
+		
+		.all_area{
+			width : 1300px;
+			margin : 0 auto;
+		}
+		
+		.top_month{
+			border-top : 1px solid #ccc;
+			vertical-align: middle;
+			text-align: center;
+		}
+		
+		.month{
+			margin-top: 40px;
+		}
+		
+		.month_text{
+			font-size : 30px;
+			
+		}
+		
+		button{
+			outline : none;
+		    background: none;
+	    	border: 0;
+		    cursor: pointer;
+		    transform: translate(-40px, -5px);
+		}
+		
+		.top_month button:before{
+			content: "";
+		    width: 0;
+		    height: 0;
+		    border-left: 6px solid transparent;
+		    border-right: 6px solid #333;
+		    border-bottom: 4px solid transparent;
+		    border-top: 4px solid transparent;
+		    position: absolute;
+		    left: 0;
+		    top: calc(50% - 5px);
+		    transform: translate(-10px, 0px);
+		}
+		
+		.prev_btn{
+			font-size : 18px;
+			color : #333;
+		}
+		
+		.month_6{
+			width : 1300px;
+			height : 450px;
+			margin-top : 30px;
+			object-fit : cover;
+		}
+		
+		.section_benefit_area{
+			width : 860px;
+			margin : 120px auto 0;
+		}
+		
+		.benefit_img{
+			top:65%;
+		}
+		
+		.figure1{
+			position: relative;
+		    width: 860px;
+		    height: 340px;
+		    overflow: hidden;
+		    margin : 0;
+		}
+		.benefit_img{
+		    position: absolute;
+		    top: 63%;
+		    left: 50%;
+		    transform: translate(-50%,-50%);
+		}
+		
+		.text_area{
+			display : inline-block;
+			margin-top : 20px;
+			width : 44%;
+		}
+		
+		.text_top{
+			font-size : 24px;
+			font-weight : 500;
+			font-style: normal;
+		}
+		
+		.text_bottom{
+			font-size : 17px;
+			margin-top : 10px;
+			font-family: 'Pretendard','Noto Sans KR', sans-serif;
+			line-height: 25px;
+		}
+		
+		.promot_goods{
+			display: inline-block;
+		    vertical-align: top;
+		    text-align: right;
+		    width: 55%;
+		    margin-top: 20px;
+		}
+		
+		.promot_img{
+			width : 130px;
+			height : 130px;
+		}
+		
+		figure{
+			margin: 0;	
+		}
+		
+		li{
+			display : inline-block;
+			padding : 0 5px;
+		}
+		
+		.benefit_area_1:nth-child(n+2){
+			margin-top : 50px;
+		}
+		
+		.promot_goods strong{
+			font-size: 18px;
+    		margin-right: 50px;
+		}
+	</style>
+
+<body>
+
+	<div class = "all_area">
+		
+		<div class="upimg">
+			<img src="rankingimages/appdown.png" style= margin-top:-7px;>
+			<img src="rankingimages/kakaopay.png" style=float:right;margin-top:-7px;>
+		</div>
+			<div class="header-inner">
+					<div class="headermenu">
+					로그인 | 회원가입 | 주문조회 | 고객센터</div>
+					<div class="rankinglogo">
+						<span><img src="rankingimages/ranking_logo.gif"></span></div>
+						<div class="search"><input type="text" placeholder="MD혜택박스 31% 할인"style=border-radius:15px;width:316px;height:20px;background:#f2f2f2;><button id="btnimages" style=margin-left:-33px;margin-top:4px;></button></div>
+						<div class="rankingicon">
+							<img src="rankingimages/couponicon.png"> 
+							<img src="rankingimages/mypageicon.png">
+							<img src="rankingimages/carticon.png">
+					</div>
+				</div>
+				
+				<div id="menu1">
+					<ul>
+					<li><a href="#"><b>전체카테고리</b></a></li>
+					<li style=margin-right:30px;><a href="#"><b>랭킹</b></a></li>
+					<li style=margin-right:30px;><a href="#"><b>이달의 특가</b></a></li>
+					<li style=margin-right:30px;><a href="#"><b>혜택정리</b></a></li>
+					<li style=margin-right:30px;><a href="#"><b>1팩 담기</b></a></li>
+					<li style=margin-right:30px;><a href="#"><b>브랜드관</b></a></li>
+					<li style=margin-right:30px;><a href="#"><b>이벤트</b></a></li>
+					<li><a href="#"><img src="rankingimages/expressmenu.png"></a></li>
+					</ul>
+				</div><!-- 상단 헤더 -->
+		
+		<div class ="top_month">
+			<div class ="month">
+				<button type="button" class= "prev_btn">
+					<span>5월호</span>
+				</button>
+				<strong class = "month_text">6월</strong>
+			</div>
+		</div>
+		
+		<div class = "month_6_top">
+			<img src ="Images/혜택정리/month_6.png" class = "month_6">
+		</div>
+		
+		<div class = "section_benefit_area">
+			<div class = "benefit_area_1">
+				<figure class = "figure1">
+					<img src = "Images/혜택정리/benefit_1.png" class="benefit_img">
+				</figure>
+				
+				<div class = "text_area" >
+					<em class = "text_top">
+						쏟아지는 6월의 혜택!
+					</em>
+					<div class ="text_bottom">
+						하나/사랑하지만 바꾸고 싶어<br/>
+						&emsp;내 몸을 바꿔줄 식단, 최대 6+6 증정<br/>
+						둘/ 랭킹만 믿고 따라와!<br/>
+						&emsp;MD 추천 혜택박스 31% 할인
+					</div>
+				</div><!-- 텍스트 박스 -->
+				
+				<div class = "promot_goods">
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/1_1.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/1_2.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/1_3.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">30,000원</strong>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div><!-- 첫번째 혜택 구간 -->
+			<div class = "benefit_area_1">
+				<figure class = "figure1">
+					<img src = "Images/혜택정리/benefit_2.png" class="benefit_img">
+				</figure>
+				
+				<div class = "text_area" >
+					<em class = "text_top">
+						쏟아지는 6월의 혜택!
+					</em>
+					<div class ="text_bottom">
+						하나/사랑하지만 바꾸고 싶어<br/>
+						&emsp;내 몸을 바꿔줄 식단, 최대 6+6 증정<br/>
+						둘/ 랭킹만 믿고 따라와!<br/>
+						&emsp;MD 추천 혜택박스 31% 할인
+					</div>
+				</div><!-- 텍스트 박스 -->
+				
+				<div class = "promot_goods">
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/2_1.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/2_2.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/2_3.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">30,000원</strong>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div><!-- 첫번째 혜택 구간 -->
+			<div class = "benefit_area_1">
+				<figure class = "figure1">
+					<img src = "Images/혜택정리/benefit_3.png" class="benefit_img">
+				</figure>
+				
+				<div class = "text_area" >
+					<em class = "text_top">
+						쏟아지는 6월의 혜택!
+					</em>
+					<div class ="text_bottom">
+						하나/사랑하지만 바꾸고 싶어<br/>
+						&emsp;내 몸을 바꿔줄 식단, 최대 6+6 증정<br/>
+						둘/ 랭킹만 믿고 따라와!<br/>
+						&emsp;MD 추천 혜택박스 31% 할인
+					</div>
+				</div><!-- 텍스트 박스 -->
+				
+				<div class = "promot_goods">
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/3_1.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/3_2.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/3_3.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">30,000원</strong>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div><!-- 첫번째 혜택 구간 -->
+			<div class = "benefit_area_1">
+				<figure class = "figure1">
+					<img src = "Images/혜택정리/benefit_4.png" class="benefit_img">
+				</figure>
+				
+				<div class = "text_area" >
+					<em class = "text_top">
+						쏟아지는 6월의 혜택!
+					</em>
+					<div class ="text_bottom">
+						하나/사랑하지만 바꾸고 싶어<br/>
+						&emsp;내 몸을 바꿔줄 식단, 최대 6+6 증정<br/>
+						둘/ 랭킹만 믿고 따라와!<br/>
+						&emsp;MD 추천 혜택박스 31% 할인
+					</div>
+				</div><!-- 텍스트 박스 -->
+				
+				<div class = "promot_goods">
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/4_1.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/4_2.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/4_3.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">30,000원</strong>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div><!-- 첫번째 혜택 구간 -->
+			<div class = "benefit_area_1">
+				<figure class = "figure1">
+					<img src = "Images/혜택정리/benefit_5.png" class="benefit_img">
+				</figure>
+				
+				<div class = "text_area" >
+					<em class = "text_top">
+						쏟아지는 6월의 혜택!
+					</em>
+					<div class ="text_bottom">
+						하나/사랑하지만 바꾸고 싶어<br/>
+						&emsp;내 몸을 바꿔줄 식단, 최대 6+6 증정<br/>
+						둘/ 랭킹만 믿고 따라와!<br/>
+						&emsp;MD 추천 혜택박스 31% 할인
+					</div>
+				</div><!-- 텍스트 박스 -->
+				
+				<div class = "promot_goods">
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/5_1.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/5_2.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/5_3.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">30,000원</strong>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div><!-- 첫번째 혜택 구간 -->
+			<div class = "benefit_area_1">
+				<figure class = "figure1">
+					<img src = "Images/혜택정리/benefit_6.png" class="benefit_img">
+				</figure>
+				
+				<div class = "text_area" >
+					<em class = "text_top">
+						쏟아지는 6월의 혜택!
+					</em>
+					<div class ="text_bottom">
+						하나/사랑하지만 바꾸고 싶어<br/>
+						&emsp;내 몸을 바꿔줄 식단, 최대 6+6 증정<br/>
+						둘/ 랭킹만 믿고 따라와!<br/>
+						&emsp;MD 추천 혜택박스 31% 할인
+					</div>
+				</div><!-- 텍스트 박스 -->
+				
+				<div class = "promot_goods">
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/6_1.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/6_2.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/6_3.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">30,000원</strong>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div><!-- 첫번째 혜택 구간 -->
+			<div class = "benefit_area_1">
+				<figure class = "figure1">
+					<img src = "Images/혜택정리/benefit_7.png" class="benefit_img">
+				</figure>
+				
+				<div class = "text_area" >
+					<em class = "text_top">
+						쏟아지는 6월의 혜택!
+					</em>
+					<div class ="text_bottom">
+						하나/사랑하지만 바꾸고 싶어<br/>
+						&emsp;내 몸을 바꿔줄 식단, 최대 6+6 증정<br/>
+						둘/ 랭킹만 믿고 따라와!<br/>
+						&emsp;MD 추천 혜택박스 31% 할인
+					</div>
+				</div><!-- 텍스트 박스 -->
+				
+				<div class = "promot_goods">
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/7_1.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/7_2.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/7_3.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">30,000원</strong>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div><!-- 첫번째 혜택 구간 -->
+			<div class = "benefit_area_1">
+				<figure class = "figure1">
+					<img src = "Images/혜택정리/benefit_8.png" class="benefit_img">
+				</figure>
+				
+				<div class = "text_area" >
+					<em class = "text_top">
+						쏟아지는 6월의 혜택!
+					</em>
+					<div class ="text_bottom">
+						하나/사랑하지만 바꾸고 싶어<br/>
+						&emsp;내 몸을 바꿔줄 식단, 최대 6+6 증정<br/>
+						둘/ 랭킹만 믿고 따라와!<br/>
+						&emsp;MD 추천 혜택박스 31% 할인
+					</div>
+				</div><!-- 텍스트 박스 -->
+				
+				<div class = "promot_goods">
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/8_1.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/8_2.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/8_3.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">30,000원</strong>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div><!-- 첫번째 혜택 구간 -->
+			<div class = "benefit_area_1">
+				<figure class = "figure1">
+					<img src = "Images/혜택정리/benefit_9.png" class="benefit_img">
+				</figure>
+				
+				<div class = "text_area" >
+					<em class = "text_top">
+						쏟아지는 6월의 혜택!
+					</em>
+					<div class ="text_bottom">
+						하나/사랑하지만 바꾸고 싶어<br/>
+						&emsp;내 몸을 바꿔줄 식단, 최대 6+6 증정<br/>
+						둘/ 랭킹만 믿고 따라와!<br/>
+						&emsp;MD 추천 혜택박스 31% 할인
+					</div>
+				</div><!-- 텍스트 박스 -->
+				
+				<div class = "promot_goods">
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/9_1.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/9_2.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/9_3.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">30,000원</strong>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div><!-- 첫번째 혜택 구간 -->
+			<div class = "benefit_area_1">
+				<figure class = "figure1">
+					<img src = "Images/혜택정리/benefit_10.png" class="benefit_img">
+				</figure>
+				
+				<div class = "text_area" >
+					<em class = "text_top">
+						쏟아지는 6월의 혜택!
+					</em>
+					<div class ="text_bottom">
+						하나/사랑하지만 바꾸고 싶어<br/>
+						&emsp;내 몸을 바꿔줄 식단, 최대 6+6 증정<br/>
+						둘/ 랭킹만 믿고 따라와!<br/>
+						&emsp;MD 추천 혜택박스 31% 할인
+					</div>
+				</div><!-- 텍스트 박스 -->
+				
+				<div class = "promot_goods">
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/10_1.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/10_2.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/10_3.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">30,000원</strong>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div><!-- 첫번째 혜택 구간 -->
+			<div class = "benefit_area_1">
+				<figure class = "figure1">
+					<img src = "Images/혜택정리/benefit_11.png" class="benefit_img">
+				</figure>
+				
+				<div class = "text_area" >
+					<em class = "text_top">
+						쏟아지는 6월의 혜택!
+					</em>
+					<div class ="text_bottom">
+						하나/사랑하지만 바꾸고 싶어<br/>
+						&emsp;내 몸을 바꿔줄 식단, 최대 6+6 증정<br/>
+						둘/ 랭킹만 믿고 따라와!<br/>
+						&emsp;MD 추천 혜택박스 31% 할인
+					</div>
+				</div><!-- 텍스트 박스 -->
+				
+				<div class = "promot_goods">
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/11_1.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/11_2.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/11_3.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">30,000원</strong>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div><!-- 첫번째 혜택 구간 -->
+			<div class = "benefit_area_1">
+				<figure class = "figure1">
+					<img src = "Images/혜택정리/benefit_12.png" class="benefit_img">
+				</figure>
+				
+				<div class = "text_area" >
+					<em class = "text_top">
+						쏟아지는 6월의 혜택!
+					</em>
+					<div class ="text_bottom">
+						하나/사랑하지만 바꾸고 싶어<br/>
+						&emsp;내 몸을 바꿔줄 식단, 최대 6+6 증정<br/>
+						둘/ 랭킹만 믿고 따라와!<br/>
+						&emsp;MD 추천 혜택박스 31% 할인
+					</div>
+				</div><!-- 텍스트 박스 -->
+				
+				<div class = "promot_goods">
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/12_1.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/12_2.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">24,900원</strong>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<figure>
+									<img src = Images/혜택정리/12_3.png class= "promot_img">
+								</figure>
+								<span class = "price">
+									<strong style="font-size:18px;">30,000원</strong>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div><!-- 첫번째 혜택 구간 -->
+				
+						
+						
+				
+			</div><!-- 전체 구간 -->
+			
+		</div><!-- 혜택 전체 구간 -->
+		
+	
+</body>
+</html>

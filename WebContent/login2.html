@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인</title>
+	<style>
+		html, body {
+			height: 100%;
+			color: #333;
+			font-size: 14px;
+			font-weight: 400;
+			/* line-height: 1.4; */
+			font-family: 'Pretendard', sans-serif;
+			word-break: break-all;
+		}
+		
+		a {
+			text-decoration: none;
+			color: #404040;
+		}
+		input{
+			padding:3px 15px;
+			border: 1px solid #ccc;
+		}
+		li {
+			list-style: none;
+		}
+
+		.header-inner {
+			width: 1120px;
+			height: 120px;
+			margin-left:100px;
+			border:1px solid white;
+		}
+		
+		.header-inner .rankinglogo {
+			diplay:block-inline;
+			width: 180px;
+			height: 46px;
+			margin-top:37px;
+		}
+		.header-inner .rankinglogo img{
+			margin-top:23px;
+		}
+		.header-inner .headermenu{
+			float:right;
+		}
+		.header-inner .rankingicon{
+			display:inline;
+			width:222px;
+			height:38px;
+			text-align:center;
+			margin-left:920px;
+			margin-top:-43px;
+			float:right;
+			
+		}
+		.header-inner .rankingicon img{
+			margin-left:20px;
+		}
+		#menu1 {
+			width:1300px;
+			background: white;
+			text-align: center;
+			height: 50px;
+			margin-top: auto;
+			margin-left: 72px;
+			font-size:17px;
+		}
+
+		#menu ul {
+			overflow: hidden;
+			background: white;
+			margin-right: 50%;
+		}
+		
+		#menu1 ul li {
+			width: 200px;
+			float: left;
+			width: 100px;
+			height: 50px;
+			line-height: 37px;
+			text-align: center;
+			margin-right:42px;
+		}
+		
+		#menu1 ul li a {
+			display: block;
+		}
+		#menu1  a {
+			width:115px;
+		}
+		
+		#menu1 ul li a:hover {
+			background: white;
+			color: blue;;
+		}
+		
+		#menu1 img {
+			margin-top: 5px;
+		}
+		.search{
+			text-align:center;
+		}
+		.login-message {
+			width:500px;
+			padding-top:60px;
+			text-align: center;
+		}
+		
+		.login-container {
+			width:926px;
+			background-color:#f7f7f7;
+			padding-left:374px;
+			}
+		button, input {
+		    overflow: visible;
+		}
+		.btn-primary {
+			    width:368px;
+			    height:52px;
+			    background: #ff6001;
+			    color: #fff;
+			    border: 1px solid #ff6001;
+			    margin-top: 10px;
+			    margin-bottom:10px;
+		    
+		}
+		.btn-white{
+			width:368px;
+		    height:52px;
+		    background: white;
+		    color: black;
+		    border: 1px solid black;
+		    margin-top: 10px;
+		    margin-bottom:20px;
+		}
+		login-message .snslogin {
+			width:100%;
+			height:50px;
+			line-height:25px;
+			vertical-align:middle;
+			display:flex;
+			justify-content: center;
+			margin-top:30px;
+			text-align:center;
+		}
+		
+		 .snslogin img{
+			text-align:center;
+			width:46px;
+			height:46px;
+			margin-right:15px;
+		}
+		.benefit img{
+			width:420px;
+			height:263px;
+			margin-top:40px;
+			margin-bottom:80px;
+		}
+		.login-area{
+			width:420px;
+			margin:0,auto;
+		}
+		.blind input{
+			height:50px;
+			margin-bottom:10px;
+		}
+		
+		#bottom_menu{
+		background:#f2f2f2;
+		width:1300px;
+		padding:19px 0 20px;
+		font-size:12px;
+		margin-top:0px;
+		border-top: 1px solid #ddd;
+		}
+		#bottom_menu span{
+			border-right:1px solid black;
+			padding-right:17px;
+			
+		}
+		#familysite{
+		border:1px solid #f2f2f2;
+		color:black;
+		margin-left:781px;
+		font-size:12px;
+		color:black;
+		display:none;
+		}
+		
+		div1 {
+			width: 1000px;
+			
+		}
+		.img1 {
+    		top: 35px;
+    		left: 10%;
+    		display: block;
+    		width: 104px;
+    		height: 42px;
+    		margin-bottom: 30px;
+	}
+		
+		.ul1 {
+			margin-left: 175px;
+    		margin-top: -81px;
+    		list-style: none;
+    		font-size: 12px;
+    		color: #808080;
+		}
+		.ul2 {
+			list-style: none;
+    		margin-left: 691px;
+    		font-size: 12px;
+    		margin-top: -118px;
+    		color:#808080;
+			
+			
+		}
+		.ul2 a{
+		font-size:11px;
+		}
+		#endbottom{
+			width: 1100px;
+    		margin-left: 96px;
+    		margin-right: 204px;
+   			text-align: center;
+			border-top: 1px solid #eee
+		}
+		#endbottom img{
+			width:207px;
+			height:20px;
+			border-right:1px solid #eee;
+		}
+		#btnimages{
+			display: inline-block;
+    		content: '';
+    		border:0;
+    		width: 18px;
+    		height: 18px;
+    		background: url(rankingimages/ico_btns.png) 0 0;
+    		vertical-align: top;
+		}		
+	</style>
+
+
+
+</head>
+<body>
+	<div class="header-inner">
+		<div class="headermenu">
+		로그인 | 회원가입 | 주문조회 | 고객센터</div>
+		<div class="rankinglogo">
+			<span><img src="rankingimages/ranking_logo.gif"></span></div>
+			<div class="search"><input type="text" placeholder="MD혜택박스 31% 할인"style=border-radius:15px;width:316px;height:20px;background:#f2f2f2;><button id="btnimages" style=margin-left:-33px;margin-top:4px;></button></div>
+			<div class="rankingicon">
+				<img src="rankingimages/couponicon.png"> 
+				<img src="rankingimages/mypageicon.png">
+				<img src="rankingimages/carticon.png">
+		</div>
+	</div>
+
+	<div id="menu1">
+		<ul>
+			<li><a href="#"><b>전체카테고리</b></a></li>
+			<li style=margin-right:30px;><a href="#"><b>랭킹</b></a></li>
+			<li style=margin-right:30px;><a href="#"><b>이달의 특가</b></a></li>
+			<li style=margin-right:30px;><a href="#"><b>혜택정리</b></a></li>
+			<li style=margin-right:30px;><a href="#"><b>1팩 담기</b></a></li>
+			<li style=margin-right:30px;><a href="#"><b>브랜드관</b></a></li>
+			<li style=margin-right:30px;><a href="#"><b>이벤트</b></a></li>
+			<li><a href="#"><img src="rankingimages/expressmenu.png"></a></li>
+		</ul>
+	</div>
+	<div class="login-container">
+		<div class="login-message">
+					<p><strong ><span style=text-align:left;margin-right:209px;font-size:32px;>안녕하세요:)</span><br>
+					<img src="rankingimages/rankingtext.png"style=margin-left:56px;> <span style=margin-right:222px;font-size:32px;>입니다.</span></strong></p>
+					<div class=logintext>
+					<label for="id" class="blind">
+					<input type ="text" name ="name" size ="50"placeholder="아이디" maxlength="50"></label>
+					<br>
+					<label for="id" class="blind">
+					<input type ="PASSWORD" name ="" size ="50"placeholder="비밀번호" maxlength="50"></label>
+					<br>
+					<input type ="checkbox" name =f value= "A" checked>자동로그인
+					<input type ="checkbox" name =f value= "O" >아이디저장
+					<br>
+					<button type ="submit"class="btn-primary">로그인</button><br/>
+				
+					<span>아이디찾기 </span>
+					<span>|</span>
+					<span>비밀번호찾기</span><br/>	
+					<p class="snslogin">
+						<img src ="rankingimages/naverlogo.png">
+						<img src ="rankingimages/applelogo.png">
+						<img src ="rankingimages/kakaologo.png">
+					</p>
+					<button type ="submit"class="btn-white">간편회원가입</button><br/>
+					<span>비회원주문조회</span><br/>
+					<div class="benefit">
+					<img src="rankingimages/benefit.png">
+					</div>
+					</div>				
+				</div>
+		</div>
+		
+		<div id="familysite" >
+			<span>랭킹닭컴</span><br/>
+			<span>개근질마트</span><br/>
+			<span>개근질닷컴</span><br/>
+			<span>피키다이어트</span><br/>
+			<span>다이어트전문 레시피 다쿡</span><br/>
+			<span>바디프로필 전문 스튜디오U</span>
+		</div>
+	<div>
+	</div>
+		<div id="bottom_menu">
+			<span style=margin-left:123px;>회사소개</span>
+			<span style=margin-left:15px;>공지사항</span>
+			<span style=margin-left:15px;>입점 · 제휴문의</span>
+			<span style=margin-left:15px;>이용약관</span>
+			<span style=margin-left:15px;border:none;><strong>개인정보처리방침</strong></span>
+			<span style=margin-left:350px;border:none;><strong>패밀리 사이트</strong></span>
+		</div>
+		<div class="div1" style=padding-left:111px;padding-top:26px;>
+		<img class="img1" src="rankingimages/b_i.png">
+		<ul class="ul1">
+			<li>
+				<span>
+					<strong style=font-size:14px;color:black;>㈜푸드나무</strong>
+				</span>
+			</li>
+			<li>
+				대표 : 김영문
+			</li>
+			<li>
+				주소 : 서울특별시 마포구 월드컵북로 396, 15층(상암동, 누리꿈스퀘어 비지니스타워)
+			</li>
+			<li>
+				사업자등록번호 : 105-87-81968
+			</li>
+			<li>
+				통신판매업신고번호 : 제 2015-서울마포-1058호
+			</li>
+			<li>
+				개인정보 보호 책임자 : 박상필
+			</li>
+			<li>
+				Copyrightⓒ랭킹닭컴 All rights reserved.
+			</li>
+		</ul>
+		<ul class="ul2">
+			<li>
+				<b style=color:black; >고객센터</b> <strong style=color:red;>02-6405-8088</strong>
+			</li>
+			<li>
+				FAX. 02-6351-8088 E-mail.admin@foodnamoo.com
+			</li>
+			<li style="margin-top: 13px;">
+				<a style="border: 1px solid black">고객의 소리</a> <a style="border: 1px solid black">1:1 문의</a> 
+			</li>
+			<li style="margin-top: 18px;">
+				<a><img src="rankingimages/b_i2.png"></a>
+			</li>
+		</ul>
+	</div>
+	<div id="endbottom">
+		<img src="rankingimages/imfosafe.png">
+		<img src="rankingimages/woori.png"style=border:none;>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+//사용법 : param = getUrlParams(); 하신 후에 param.num1 이라고 하면 파라미터 num1의 값이 됩니다!
+	function getUrlParams() {     
+	    var params = {};  
+	    
+	    window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, 
+	    	function(str, key, value) { 
+	        	params[key] = value; 
+	        }
+	    );     
+	    
+	    return params; 
+	}
+
+/* 	$(function() {
+		param = getUrlParams();
+		if(param.id == undefined) {
+			$("#div1").html("<button>A</button>");
+		} else {
+			$("#div1").html("<button>B</button>");
+		}
+	});
+ */</script>
+</head>
+<body>
+	<div style="border: 1px solid #ccc;">
+	
+		<div>
+			<form >asdf</form>
+			<form style = "display:inline-block;">asdf</form>
+			<form style = "display:inline-block;">asdf</form>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

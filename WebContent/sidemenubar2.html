@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"
+	href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'>
+<style>
+body {
+	font-family: 'Pretendard', sans-serif;
+}
+
+.quickmenu {
+	position: absolute;
+	top: 0;
+	right: 50%;
+	z-index: 4;
+	width: 100%;
+	min-width: 1400px;
+	max-width: 1440px;
+	transform: translateX(50%);
+	-webkit-transform: translateX(50%);
+}
+
+.side-quick {
+	position: fixed;
+	top: 70px;
+	right: 0;
+	width: 100px;
+	height: 120px;
+}
+
+.recent-list {
+	margin-top: -10px;
+	border: 1px solid #ddd;
+	background: #fff;
+}
+
+.sidebnr-link {
+	display: block;
+	width: 100%;
+	font-size: 12px;
+	text-align: center;
+	color: #666;
+	padding: 5px 0;
+	border-top: 1px solid #ddd;
+	text-decoration: none;
+}
+
+.sidebnr-link-top {
+	display: block;
+	width: 100%;
+	font-size: 12px;
+	text-align: center;
+	color: #666;
+	padding: 5px 0;
+	text-decoration: none;
+}
+
+.side-btns {
+	margin-top: 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 0;
+}
+
+.btn-side-func {
+	border: 1px solid #ddd;
+	min-width: 32px;
+	height: 32px;
+	margin-top: 4px;
+	background: #fff url(Images/ico_sidebtn.png) 0 0;
+	margin-left: -6px;
+	box-sizing: border-box;
+	font: inherit;
+	color: inherit;
+	width: 34%;
+	cursor: pointer;
+}
+
+.btn-side {
+	margin-top: 10px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<div class="quickmenu">
+		<div class="side-quick">
+			<div class="recent-list">
+				<a class="sidebnr-link-top"><span>최근 본 상품</span></a> <a
+					class="sidebnr-link"><span>찜한 상품</span></a> <a class="sidebnr-link"><span>장바구니</span></a>
+			</div>
+			<div class="btn-side">
+				<button class="btn-side-func" style="margin-left: 1px;"></button>
+				<button class="btn-side-func" style="background-position: -40px 0;"></button>
+				<button class="btn-side-func" style="background-position: -80px 0;"></button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

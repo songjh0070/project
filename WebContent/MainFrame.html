@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>메인프레임</title>
+	<link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	<script src="../JS/jquery-3.6.0.min.js"></script>
+		<style>
+		body {
+		    font-family: 'Pretendard', sans-serif;
+		}
+		.header-inner {
+			position: relative;
+			max-width: 1100px;
+			min-height: 120px;
+			margin: 0 auto; 
+		}
+		.body-inner{
+			width: 1100px;
+			margin: 0 auto;
+		}
+		.logo {
+			display: block;
+			position: absolute;
+			top: 50px;
+			left: 0;
+			width: 180px;
+			height: 46px;
+			background: url(../ProjectImages/logo.gif);
+		}
+		a {
+		    background: transparent;
+		    text-decoration: none;
+		    color: inherit;
+		}
+		.blind {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			margin: -1px;
+			padding: 0;
+			overflow: hidden;
+			clip: rect(0, 0, 0, 0);
+			border: 0;
+		}
+		.logo > a {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		.util {
+			position: absolute;
+			top: 10px;
+			right: 0;
+		}
+		ul, ol {
+			list-style: none;
+		}
+		.util > ul {
+			overflow: hidden;
+		}
+		.util > ul > li {
+			float: left;
+			position:relative;
+			padding: 0 12px 0 0;
+			font-size: 13px;
+			 color: #4D4D4D;
+		}
+		.util > ul > .list:before {
+			display: inline-block;
+			content: '';
+			width: 1px;
+			height: 10px;
+			vertical-align: middle;
+			background: #E6E6E6;
+			margin: -2px 11px 0 0;
+		}
+		.util > ul > li:last-child {
+			padding-right: 0;
+		}
+		.header-search {
+			position: absolute;
+			top: 60px;
+			left: 370px;
+			text-align: center;
+			z-index: 100;
+		}
+		.top-search.on {
+			border: 1px solid #666;
+		}
+		.top-search {
+			position: relative;
+			display: inline-block;
+			width: 380px;
+			height: 38px;
+			border: 1px solid #ddd;
+			border-radius: 21px;
+			background: #fafafa;
+			padding: 0 45px 0 20px;
+		}
+		.top-search .input-search {
+			width: 100%;
+			height: 36px;
+			border: 0;
+			padding: 0;
+			font-size: 15px;
+			color: #555;
+			text-align: left;
+			background: transparent;
+			outline : none;
+		}
+		button {
+			background: none;
+			font-family: 'Pretendard', sans-serif;
+			cursor: pointer;
+			outline: none;
+			border: 0;
+			margin: 0;
+			padding: 0;
+		}
+		 .btn-top-search {
+			position: absolute;
+			top: 0;
+			right: 10px;
+			width: 35px;
+			height: 35px;
+		} 
+		.btn-top-search:after {
+			display: inline-block;
+			content: '';
+			width: 18px;
+			height: 18px;
+			background: url(../ProjectImages/Main/ico_btns.png) 0 0;
+			vertical-align: top;
+		}
+		.my-menu {
+			position: absolute;
+			top: 60px;
+			right: 0;
+		}		
+		.my-menu > ul {
+			font-size: 0;
+			padding-left: 0px;
+    		width: 195px;
+		}
+		.my-menu > ul > li {
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 38px;
+		}
+		.btn-util-coupon {
+			display: inline-block;
+			width: 26px;
+			height: 38px;
+			background: url(../ProjectImages/ico_util.png) left 40px; 
+		}
+		.btn-util-mypage {
+			display: inline-block;
+			width: 24px;
+			height: 38px;
+			background: url(../ProjectImages/ico_util.png) left 7px; 
+		}
+		.btn-util-cart {
+			display: inline-block;
+			margin-left: -6px;
+			maegin-right: 11px;
+			position: relative;
+			width: 26px;
+			height: 38px;
+			background: url(../ProjectImages/ico_util.png) 27px 8px; 
+		}
+		.count {
+			display: block;
+			position: absolute;
+			top: 0;
+			right: -11px;
+			width: 18px;
+			height: 18px;
+			color: #fff;
+			font-size: 11px;
+			font-weight: bold;
+			font-family: "Malgun Gothic";
+			text-align: center;
+			line-height: 1.6;
+			background: #FF542A;
+			border-radius: 50%;
+		}
+		
+		.gnb-wrap {
+			width: 100%;
+			border-bottom: 1px solid #eee;
+			background: #fff;
+			z-index: 101;
+		}
+		.inner {
+			position: relative;
+			width: 1100px;
+			height: 100%;
+			margin: 0 auto;
+		}
+		.category-wrap {
+			position: absolute;
+			width: 186px;
+			bottom: 0px;
+			left: -20px;
+		}
+		.category-wrap .category-menu {
+			position: absolute;
+			top: 58px;
+			left: 0;
+			z-index: 1;
+		}
+		.category-menu .cate-dep1 {
+			overflow-x: hidden;
+			overflow-y: auto;
+			background: #fff;
+			border: 1px solid #ccc;
+			border-top: 0;
+			border-right: 0;
+			padding-top: 6px;
+		}
+		.cate-dep1 > li > a {
+			display: block;
+			padding: 4px 15px 4px;
+		}
+		.cate-dep1 > li .ico-cate-gnb {
+			vertical-align: middle;
+			display: inline-block;
+			width: 30px;
+			text-align: center;
+		}
+		i > img {
+			max-width: 100%;
+			vertical-align: top;
+		}
+		.cate-dep1 > li .menu {
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 2.1;
+			margin-left: 4px;
+			font-size: 14px;
+		}
+		.btn-menu-all {
+			position: relative;
+			display: block;
+			width: 186px;
+			color: #333;
+			font-size: 17px;
+			font-weight: 700;
+			-webkit-transition: .1s;
+			padding: 19px 0;
+			line-height: 20px;
+		}
+		.btn-menu-all:before {
+			display: inline-block;
+			width: 14px;
+			height: 12px;
+			content: '';
+			vertical-align: middle;
+			background: url(../ProjectImages/ico_gnb_all.png) 0 0;
+			margin: -3px 10px 0 20px; 
+		}
+		.btn-menu-all:after {
+			display: block;
+			content: '';
+			position: absolute;
+			top: 21px;
+			right: 0;
+			width: 1px;
+			height: 16px;
+			background: #ccc;
+		}
+		.category-menu {
+			position: absolute;
+			top: 58px;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+		}
+		.cate-dep1 {
+			display: none;
+			overflow-y: auto;
+			overflow-x: hidden;
+			background: #fff;
+			border: 1px solid #ccc;
+			border-top: 0;
+			border-right: 0;
+			padding: 6px;
+		}
+		.cate-dep1 > li {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			vertical-align: baseline;
+		}
+		.ico-cate-gnb{
+			vertical-align: middle;
+			display: inline-block;
+			width: 30px;
+			text-align: center;
+		}
+		.cate-dep1 > li > a {
+			display: block;
+			padding: 4px 15px 4px;
+		}
+		.gnb-wrap .gnb {
+			width: 100%;
+			padding-left: 145px;
+		}
+		.gnb-wrap .gnb > ul {
+			display: table;
+			table-layout: auto;
+			max-width: 100%;
+		}
+		.gnb-wrap .gnb > ul > li {
+			display: table-cell;
+			padding: 0 36px;
+			word-break: keep-all;
+		}
+		.gnb > ul > li > a {
+			display: block;
+			color: #333;
+			font-size: 17px;
+			font-weight: 700;
+			text-align: center;
+			padding: 18px 0 18px;
+			height: 100%;
+			white-space: nowrap;
+			line-height: 20px;
+		}
+		 .ico-txt-gnb {
+			display: inline-block;
+			width: 90px;
+			height: 17px;
+			overflow: hidden;
+			background: url(../ProjectImages/exe_delivery.png) center right no-repeat;
+			background-size: cover;
+			position: relative;
+			top: 3px;
+		} 
+		
+	</style>
+</head>
+<body>
+	<div class="header-inner">
+		<h1 class="logo"><a href="/"></a></h1>
+		<div class="util">
+			<ul>
+				<li><a href="/auth/login">로그인</a></li>
+				<li class="list"><a href="/member/join/general">회원가입</a></li>
+				<li class="list"><a href="/mypage/orderlist">주문조회</a></li>
+				<li class="list"><a href="/service/center">고객센터</a></li>
+			</ul>		
+		</div>
+		<div class="header-search">
+			<div class="top-search on">
+				<input type="search" class="input-search" id="rankKeyword" name="rankKeyword"
+				value onkeydown="fnSearchKeyDown(this);" autocomplete="off" placeholder="NEW 어부닭바 3%적립!" data-link-code="200"
+				data-advert-url="https://www.rankingdak.com/product/view?productCd=F000000244" maxlength="100"/>
+				<button type="button" class="btn-top-search" title onclick="fnBtnTopSearch(this);"><span class="blind">검색</span></button>
+			</div>
+			
+		</div>
+		<div class="my-menu">
+			<ul>
+				<li><a href="/display/coupon/list" class="btn-util-coupon" title><span class="blind">쿠폰</span></a></li>
+				<li><a href="/mypage/main" class="btn-util-mypage" title><span class="blind">마이페이지</span></a></li>
+				<li><a href="/order/cart" class="btn-util-cart" title><span class="blind">장바구니</span><em class="count">0</em></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="inner">
+		<div class="gnb-wrap">
+			<div class="inner">
+				<div class="category-wrap">
+					<a href="#all-category" class="btn-menu-all"><span>전체 카테고리</span></a>
+					<nav id="all-category" class="category-menu">
+						<ul class="cate-dep1" style="display: none; max-height: 1143px;">
+							<li><a href="">
+								<i class="ico-cate-gnb"><img src="https://file.rankingdak.com/image/RANK/BANNER/CATE_PC1_1/20220523/IMG1653WAC282333226.png"></i>
+								<span class="menu">신상품</span></a></li>
+						</ul>
+					</nav>
+				</div>
+				<nav id="gnb" class="gnb">
+					<ul>
+						<li><a href="/display/rank/sale"><span>랭킹</span></a></li>
+						<li><a href="/promotion/exhibit/list"><span>이달의 특가</span></a></li>
+						<li><a href="/display/benefits/view"><span>혜택정리</span></a></li>
+						<li><a href="/display/onePack/list"><span>1팩 담기</span></a></li>
+						<li><a href="/display/brand/list"><span>브랜드관</span></a></li>
+						<li><a href="/promotion/event/list"><span>이벤트</span></a></li>
+						<li><a href="/display/expressDelivery/list"><em class="ico-txt-gnb"><span class="blind">특급배송</span></em></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

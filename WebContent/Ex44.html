@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>제이쿼리 연습</title>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script>
+		function calc_price() {
+
+		}
+		
+		$(function() {
+			$("#btn_plus").click(function() {
+				var qty_item = $(this).parent().find("#qty1");
+				var value = Number(qty_item.val());
+				qty_item.val(value + 1);
+			});
+			$("#btn_minus").click(function() {
+				var qty_item = $(this).parent().find("#qty1");
+				var value = Number(qty_item.val());
+				if(value-1<0)
+					return;
+				qty_item.val(value - 1);
+			});
+		});
+	</script>
+	<style>
+		table {
+			border-collapse: collapse;
+			table-layout: fixed;
+		}
+		table, td {
+			border: 2px solid grey;
+			text-align: center;
+		}
+		td:nth-child(1) {
+			width:300px;
+		}
+		td:not(:nth-child(1)) {
+			width:120px;
+		}
+		td > img {
+			width:250px;
+		}
+		#qty1 {
+			width:20px;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>품목</td>
+			<td>단가</td>
+			<td>수량</td>
+			<td>가격</td>
+		</tr>
+		<tr>
+			<td><img src="Images/참깨라면1000.png"/></td>
+			<td id="unit_price">1000원</td>
+			<td>
+				<button id="btn_plus">+</button>
+				<input type="text" id="qty1" value="0"/>
+				<button id="btn_minus">-</button>
+			</td>
+			<td><span id="price1"></span>원</td>
+		</tr>
+	</table>	
+</body>
+</html>
+
+
+
+
+

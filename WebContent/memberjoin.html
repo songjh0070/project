@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+	<style>
+		html, body {
+			height: 100%;
+			color: #333;
+			font-size: 14px;
+			font-weight: 400;
+			/* line-height: 1.4; */
+			font-family: 'Pretendard', sans-serif;
+			word-break: break-all;
+			margin:0,auto;
+	
+		}
+		
+		a {
+			text-decoration: none;
+			color: #404040;
+		}
+		input{
+			padding:3px 15px;
+			border: 1px solid #ccc;
+		}
+		li {
+			list-style: none;
+		}
+		.upimg{
+			width:1300px;
+		}
+		.upimg img{
+			width:650px;
+		}
+
+		.header-inner {
+			width: 1120px;
+			height: 120px;
+			margin-left:100px;
+			border:1px solid white;
+		}
+		
+		.header-inner .rankinglogo {
+			diplay:block-inline;
+			width: 180px;
+			height: 46px;
+			margin-top:37px;
+		}
+		.header-inner .rankinglogo img{
+			margin-top:23px;
+		}
+		.header-inner .headermenu{
+			float:right;
+		}
+		.header-inner .rankingicon{
+			display:inline;
+			width:222px;
+			height:38px;
+			text-align:center;
+			margin-left:920px;
+			margin-top:-43px;
+			float:right;
+			
+		}
+		.header-inner .rankingicon img{
+			margin-left:20px;
+		}
+		#menu1 {
+			width:1300px;
+			background: white;
+			text-align: center;
+			height: 50px;
+			margin-top: auto;
+			margin-left:72px;
+			font-size:17px;
+		}
+
+		#menu ul {
+			overflow: hidden;
+			background: white;
+			margin-right: 50%;
+		}
+		
+		#menu1 ul li {
+			width: 200px;
+			float: left;
+			width: 100px;
+			height: 50px;
+			line-height: 37px;
+			text-align: center;
+			margin-right:42px;
+		}
+		
+		#menu1 ul li a {
+			display: block;
+		}
+		#menu1  a {
+			width:115px;
+		}
+		
+		#menu1 ul li a:hover {
+			background: black;
+			color: white;
+		}
+		
+		#menu1 img {
+			margin-top: 5px;
+		}
+		
+		.search{
+			text-align:center;
+			border:0px solid white;
+		}
+		.join-area{
+			width:520px;
+			margin:0 auto;
+			padding:60px 100px 90px;
+			margin-left:290px;
+			margin-right:290px;
+			margin-top:40px;
+			background-color:white;
+		}
+		.id{
+			witdh:522px;
+			
+		}
+		.pw{
+			witdh:522px;
+			
+			margin-top:20px;
+		}
+		.name{
+			witdh:522px;
+			margin-top:20px;
+			vertical-align:middle;
+		}
+		.nick{
+			witdh:522px;
+			margin-top:20px;
+		}
+		.phone{
+			witdh:522px;
+			margin-top:20px;			
+		}
+
+		.email{
+			witdh:522px;
+			margin-top:20px;
+		}
+		.birth{
+			witdh:522px;
+			height:50px;
+			margin-top:20px;
+		}
+
+		.gender{
+			witdh:522px;
+			height:50px;
+			margin-top:30px;
+		}
+		.lifetime{
+			witdh:522px;
+			margin-top:20px;
+		}
+		.accept{
+			witdh:522px;
+			margin-top:20px;
+		}
+		.recom-id{
+			witdh:522px;
+			margin-top:20px;
+		}	
+		.btn-primary{
+		   	width:260px;
+		    height:52px;
+		    background: #ff6001;
+		    color: #fff;
+		    border: 1px solid #ff6001;
+		    margin-top: 20px;
+		    margin-bottom:20px;
+		    font-size:15px;
+		    margin-left:126px;
+		}
+		#idcheck{
+			padding:10px;
+			border:1px solid black;
+			font-size:13px;
+		}
+		#email-select{
+			width:107px;
+			height:58px;
+			padding:10px;
+		}
+		#year{
+			width:139px;
+			height:58px;
+			padding:10px;
+			margin-left:21px;
+		
+		}
+		#month{
+			width:139px;
+			height:58px;
+			padding:10px;
+		
+		}
+		#day{
+			width:139px;
+			height:58px;
+			padding:10px;
+			}
+		.login-container {
+			width:1300px;
+			background-color:#f7f7f7;
+			padding-top: 10px;
+			margin-top:5px;
+			padding-bottom:40px;
+		}
+		#bottom_menu{
+			background:#f2f2f2;
+			width:1300px;
+			padding:19px 0 20px;
+			font-size:12px;
+			margin-top:0px;
+			border-top: 1px solid #ddd;
+		}
+		#bottom_menu span{
+			border-right:0.5px solid black;
+			padding-right:17px;
+			
+		}
+		#familysite{
+			border:1px solid #f2f2f2;
+			color:black;
+			margin-left:781px;
+			font-size:12px;
+			color:black;
+			display:none;
+		}		
+		div1 {
+			width: 1000px;
+			
+		}
+		.img1 {
+    		top: 35px;
+    		left: 10%;
+    		display: block;
+    		width: 104px;
+    		height: 42px;
+    		margin-bottom: 30px;
+	}
+		
+		.ul1 {
+			margin-left: 175px;
+    		margin-top: -81px;
+    		list-style: none;
+    		font-size: 12px;
+    		color: #808080;
+		}
+		.ul2 {
+			list-style: none;
+    		margin-left: 691px;
+    		font-size: 12px;
+    		margin-top: -118px;
+    		color:#808080;
+			
+			
+		}
+		.ul2 a{
+		font-size:11px;
+		}
+		
+		#endbottom{
+			width: 1100px;
+    		margin-left: 96px;
+    		margin-right: 204px;
+   			text-align: center;
+			border-top: 1px solid #eee
+		}
+		#endbottom img{
+			width:207px;
+			height:20px;
+			border-right:1px solid #eee;
+		}
+		#btnimages{
+			display: inline-block;
+    		content: '';
+    		border:0;
+    		width: 18px;
+    		height: 18px;
+    		background: url(rankingimages/ico_btns.png) 0 0;
+    		vertical-align: top;
+		}	
+	</style>
+	<script>
+			function selectAll(selectAll)  {
+		  		const checkboxes 
+		   	 	= document.getElementsByName('accept');
+		  		checkboxes.forEach((checkbox) => {
+		    	checkbox.checked = selectAll.checked;
+		  		})
+			}
+	</script>
+
+</head>
+<body>
+<div class="upimg">
+	<img src="rankingimages/appdown.png" style= margin-top:-7px;>
+	<img src="rankingimages/kakaopay.png" style=float:right;margin-top:-7px;>
+</div>
+	<div class="header-inner">
+			<div class="headermenu">
+			로그인 | 회원가입 | 주문조회 | 고객센터</div>
+			<div class="rankinglogo">
+				<span><img src="rankingimages/ranking_logo.gif"></span></div>
+				<div class="search"><input type="text" placeholder="MD혜택박스 31% 할인"style=border-radius:15px;width:316px;height:20px;background:#f2f2f2;><button id="btnimages" style=margin-left:-33px;margin-top:4px;></button></div>
+				<div class="rankingicon">
+					<img src="rankingimages/couponicon.png"> 
+					<img src="rankingimages/mypageicon.png">
+					<img src="rankingimages/carticon.png">
+			</div>
+		</div>
+	
+		<div id="menu1">
+			<ul>
+			<li><a href="#"><b>전체카테고리</b></a></li>
+			<li style=margin-right:30px;><a href="#"><b>랭킹</b></a></li>
+			<li style=margin-right:30px;><a href="#"><b>이달의 특가</b></a></li>
+			<li style=margin-right:30px;><a href="#"><b>혜택정리</b></a></li>
+			<li style=margin-right:30px;><a href="#"><b>1팩 담기</b></a></li>
+			<li style=margin-right:30px;><a href="#"><b>브랜드관</b></a></li>
+			<li style=margin-right:30px;><a href="#"><b>이벤트</b></a></li>
+			<li><a href="#"><img src="rankingimages/expressmenu.png"></a></li>
+			</ul>
+		</div>
+	
+	
+<div class="login-container">
+	<div class="join-area">
+		<h2 style="text-align:center;">회원가입</h2>
+			<div class="id"><span style= margin-right:35px;> 아이디 *</span>
+				<input type="text" placeholder="4~16자 이상 영문 또는 숫자만 사용 가능"style=width:313.047px;height:48px;>
+				<button type="submit" id="idcheck"style=float:right;height:58px;>중복확인</button>
+			</div>
+			<div class="pw"><span style= margin-right:21px;>비밀번호 *</span>
+				<input type="text" placeholder="6~16자 영문,숫자,특수문자 1개 이상씩 혼용 필수"style=width:393px;height:48px;><br/>
+				<span class="pwcheck">
+				<input type="text" placeholder="비밀번호 확인"style=width:394px;height:48px;margin-left:92.5px;margin-top:10px;></span>
+			</div>
+			<div class="name"><span style= margin-right:49px;>이름 *</span>
+				<input type="text" placeholder="2자 이상 입력"style=width:393px;height:48px;>
+			</div>
+			<div class="nick"> <span style=margin-right:35px;>닉네임 * </span>
+				<input type="text" placeholder="한글 8자,영문 16자 이내"style=width:313.047px;height:48px;>
+				<button type="submit" id="idcheck"style=float:right;height:58px;>중복확인</button>
+			</div>
+			<div class="phone"> <span style= margin-right:21px;>휴대전화 *</span> 
+				<input type="text" placeholder="휴대폰 인증"style=width:393px;height:48px;>
+			</div>
+			<div class="email"><span style= margin-right:35px;>이메일 *</span>
+				<input type="text" placeholder="이메일 주소"style=width:281px;height:48px;>
+				<select id ="email-select"size="1">
+					<option value="1" selected>직접입력</option>
+					<option value="2">naver.com</option>
+					<option value="3">daum.net</option>
+					<option value="4">hanmail.net</option>
+					<option value="5">gmail.com</option>
+					<option value="6">hotmail.com</option>
+					<option value="7">yahoo.co.kr</option>
+					<option value="8">chollian.net</option>
+					<option value="9">empal.com</option>
+					<option value="10">freechal.com</option>
+					<option value="11">htel.net</option>
+					<option value="12">hanmir.com</option>
+					<option value="13">hanafos.com</option>
+					<option value="14">korea.com</option>
+					<option value="15">lycos.co.kr</option>
+					<option value="16">nate.com</option>
+					<option value="17">netian.com</option>
+					<option value="18">paran.com</option>
+					<option value="19">unitel.co.kr</option>
+				</select>
+			</div>
+			<div class="birth"> 생년월일 * 
+				<select id="year">
+					<option value="1">년도선택 </option>
+					<option value="2">2020</option>
+					<option value="3">2019 </option>
+					<option value="4">2018 </option>
+					<option value="5">2017 </option>
+					<option value="6">2016 </option>
+					<option value="7">2015 </option>
+					<option value="8">2014 </option>
+					<option value="9">2013 </option>
+					<option value="10">2012 </option>
+					<option value="11">2011 </option>
+					<option value="12">2010 </option>
+					<option value="13">2009 </option>
+					<option value="14">2008 </option>
+					<option value="15">2007 </option>
+					<option value="16">2006 </option>
+					<option value="17">2005 </option>
+					<option value="18">2004 </option>
+					<option value="19">2003 </option>
+					<option value="20">2002 </option>
+					<option value="21">2001 </option>
+					<option value="22">2000 </option>
+					<option value="23">1999 </option>
+					<option value="24">1998 </option>
+					<option value="25">1997 </option>
+					<option value="26">1995 </option>
+					<option value="27">1994 </option>
+					<option value="28">1993 </option>
+					<option value="29">1992 </option>
+					<option value="30">1991 </option>
+					<option value="31">1990 </option>
+					<option value="32">1989 </option>
+					<option value="33">1988 </option>
+					<option value="34">1987 </option>
+					<option value="35">1986 </option>
+					<option value="36">1985 </option>
+					<option value="37">1984 </option>
+					<option value="38">1983 </option>
+					<option value="39">1982 </option>
+					<option value="40">1981 </option>
+					<option value="41">1979 </option>
+					<option value="42">1978 </option>
+					<option value="43">1977 </option>
+					<option value="44">1976 </option>
+					<option value="45">1975 </option>
+					<option value="46">1974 </option>
+					<option value="47">1973 </option>
+					<option value="48">1972 </option>
+					<option value="49">1971 </option>
+					<option value="50">1970 </option>
+					<option value="51">1969 </option>
+					<option value="52">1968 </option>
+					<option value="53">1967 </option>
+					<option value="54">1966 </option>
+					<option value="55">1965 </option>
+					<option value="56">1964 </option>
+					<option value="57">1963 </option>
+					<option value="58">1962 </option>
+					<option value="59">1961 </option>
+					<option value="60">1960 </option>
+				</select>
+				<select id="month">
+					<option value="1">월 선택</option>
+					<option value="2">01</option>
+					<option value="3">02</option>
+					<option value="4">03</option>
+					<option value="5">04</option>
+					<option value="6">05</option>
+					<option value="7">06</option>
+					<option value="8">07</option>
+					<option value="9">08</option>
+					<option value="10">09</option>
+					<option value="11">10</option>
+					<option value="12">11</option>
+					<option value="13">12</option>
+				</select>
+				<select id="day">
+					<option value="1">일 선택</option>
+					<option value="2">01</option>
+					<option value="3">02</option>
+					<option value="4">03</option>
+					<option value="5">04</option>
+					<option value="6">05</option>
+					<option value="7">06</option>
+					<option value="8">07</option>
+					<option value="9">08</option>
+					<option value="10">09</option>
+					<option value="11">10</option>
+					<option value="12">11</option>
+					<option value="13">12</option>
+					<option value="14">13</option>
+					<option value="15">14</option>
+					<option value="16">15</option>
+					<option value="17">16</option>
+					<option value="18">17</option>
+					<option value="19">18</option>
+					<option value="20">19</option>
+					<option value="21">20</option>
+					<option value="22">21</option>
+					<option value="23">22</option>
+					<option value="24">23</option>
+					<option value="25">24</option>
+					<option value="26">25</option>
+					<option value="27">26</option>
+					<option value="28">27</option>
+					<option value="29">28</option>
+					<option value="30">29</option>
+					<option value="31">30</option>
+					<option value="32">31</option>
+				</select>
+			</div>
+			<div class="gender"> <span style =margin-right:50px;>성별 *</span>
+				<input type="radio" name="gender"><span style =font-size:15px;>남자</span>
+				<input type="radio" name="gender"style=margin-left:30px;>
+				<span style =font-size:15px;>여자</span>
+			</div>
+			<div class="lifetime"><span style =margin-right:21px;> 평생회원 *</span>
+				<input type="radio" name="lifetime-accept"><span style =font-size:15px;>동의</span>
+				<input type="radio" name="lifetime-accept"style=margin-left:30px;>
+				<span style =font-size:15px;>동의안함</span>
+				<div style=width:422px;margin-left:98px;><hr/></div>
+				<span style=margin-left:98px;font-size:12px;>※ 평생회원은 회원탈퇴 전까지  휴면회원으로 전환되지 않습니다.</span>
+			</div>
+			<div class="accept"> <span style=margin-right:10px;>약관동의 *</span>
+					<input type="checkbox" name="male"style=margin-left:14px; value ="selectall"onclick="selectAll(this)">
+					<span >전체동의</span>
+					<div style=width:422px;margin-left:98px;><hr/></div>
+					<div style=margin-left:82px;>
+					<input type="checkbox" name="accept"style=margin-left:14px;>
+					<span>회원가입 약관동의</span>
+					
+					
+					
+					<span style=color:red;> (필수)</span><span style=float:right;font-size:10px;>내용보기</span><br/>
+					<input type="checkbox" name="accept"style=margin-left:14px;>
+					<span>개인정보처리방침 동의</span>
+					<span style=color:red;> (필수)</span><span style=float:right;font-size:10px;>내용보기</span><br/>
+					<input type="checkbox" name="accept"style=margin-left:14px;><span>이메일수신동의 (선택)</span><br/>
+					<input type="checkbox" name="accept"style=margin-left:14px;><span>SMS 수신동의 (선택)</span><br/>
+					</div>
+					<div style=width:422px;margin-left:98px;><hr/></div>
+						<span style=margin-left:98px;font-size:12px;>※ 회원정보 수정에서 언제든지 수신거부 하실 수 있습니다.</span>
+						<span style=margin-left:98px;font-size:12px;>※ 상품 구매정보는 수신동의 여부 관계없이 받아 보실 수 있습니다. </span>
+			</div>	
+			<div class="recom-id"><span style=margin-right:18px;>추천아이디 </span>
+				<input type="text" placeholder="추천아이디 입력"style=width:313.047px;height:48px;>
+				<button type="submit" id="idcheck"style=float:right;height:58px;text-align:center;>확인하기</button>
+			</div>
+				<button type ="submit"class="btn-primary">회원가입</button>
+	</div>
+</div>
+<div id="familysite" >
+			<span>랭킹닭컴</span><br/>
+			<span>개근질마트</span><br/>
+			<span>개근질닷컴</span><br/>
+			<span>피키다이어트</span><br/>
+			<span>다이어트전문 레시피 다쿡</span><br/>
+			<span>바디프로필 전문 스튜디오U</span>
+		</div>
+	<div>
+	</div>
+		<div id="bottom_menu">
+			<span style=margin-left:123px;>회사소개</span>
+			<span style=margin-left:15px;>공지사항</span>
+			<span style=margin-left:15px;>입점 · 제휴문의</span>
+			<span style=margin-left:15px;>이용약관</span>
+			<span style=margin-left:15px;border:none;><strong>개인정보처리방침</strong></span>
+			<span style=margin-left:350px;border:none;><strong>패밀리 사이트</strong></span>
+		</div>
+		<div class="div1" style=padding-left:111px;padding-top:26px;>
+		<img class="img1" src="rankingimages/b_i.png">
+		<ul class="ul1">
+			<li>
+				<span>
+					<strong style=font-size:14px;color:black;>㈜푸드나무</strong>
+				</span>
+			</li>
+			<li>
+				대표 : 김영문
+			</li>
+			<li>
+				주소 : 서울특별시 마포구 월드컵북로 396, 15층(상암동, 누리꿈스퀘어 비지니스타워)
+			</li>
+			<li>
+				사업자등록번호 : 105-87-81968
+			</li>
+			<li>
+				통신판매업신고번호 : 제 2015-서울마포-1058호
+			</li>
+			<li>
+				개인정보 보호 책임자 : 박상필
+			</li>
+			<li>
+				Copyrightⓒ랭킹닭컴 All rights reserved.
+			</li>
+		</ul>
+		<ul class="ul2">
+			<li>
+				<b style=color:black; >고객센터</b> <strong style=color:red;>02-6405-8088</strong>
+			</li>
+			<li>
+				FAX. 02-6351-8088 E-mail.admin@foodnamoo.com
+			</li>
+			<li style="margin-top: 13px;">
+				<a style="border: 1px solid black">고객의 소리</a> <a style="border: 1px solid black">1:1 문의</a> 
+			</li>
+			<li style="margin-top: 18px;">
+				<a><img src="rankingimages/b_i2.png"></a>
+		</li></ul>
+	</div>
+	<div id="endbottom">
+		<img src="rankingimages/imfosafe.png">
+		<img src="rankingimages/woori.png"style=border:none;>
+		
+	</div>
+</body>
+</html>

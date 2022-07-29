@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<style>
+	
+		body > div {
+			width:528px;
+			margin:0 auto;
+		}
+		table {
+			border-collapse: collapse;
+			table-layout: fixed;
+		}
+		table, td {
+			border: 2px solid grey;
+			text-align: center;
+		}
+		table td:nth-child(1) {
+			width:210px;
+		}
+		table td:not(:nth-child(1)) {
+			width:100px;
+		}
+		td > img {
+			width:200px;
+		}
+		.qty {
+			width:30px;
+		}
+		div > p {
+			text-align: right;
+		}
+		
+	</style>
+	<script>
+	
+		function init() {
+			$(".qty").val("0");
+			$(".price").text("0원");
+			$("#total_price").text("0");
+		}
+		
+		function update_price(_qty) {
+			var qty= Number(_qty.val());
+			var unit_price = Number(_qty.parent().parent().find(".unit_price").text().substring(0,_qty.parent().parent().find(".unit_price").text().length-1));
+			_qty.parent().parent().find(".price").text(qty*unit_price + "원");
+		}
+		
+		function update_total_price() {
+			var total = Number($("#price1").text().substring(0,$("#price1").text().length-1)) +
+						Number($("#price2").text().substring(0,$("#price2").text().length-1)) +
+						Number($("#price3").text().substring(0,$("#price3").text().length-1));
+			$("#total_price").text(total);
+		}
+		
+		$(function() {
+			$(".btn_minus").click(function() {
+				var qty = $(this).parent().find(".qty");
+ 				if(Number(qty.val()<=0))
+					return;
+				qty.val(Number(qty.val())-1);
+				update_price(qty);
+				update_total_price();
+			});
+			
+			$(".btn_plus").click(function() {
+ 				var qty = $(this).parent().find(".qty");
+				qty.val(Number(qty.val())+1);
+				update_price(qty);
+				update_total_price();
+			});
+			init();
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<table>
+		
+			<tr>
+				<th>품목</th>
+				<th>단가</th>
+				<th>수량</th>
+				<th>가격</th>
+			</tr>
+			
+			<tr>
+			
+				<td><img src="Images/참깨라면1000.png"/></td>
+				<td class="unit_price">1000원</td>
+				<td>
+					<button class="btn_minus">-</button>
+					<input type="text" class="qty"/>
+					<button class="btn_plus">+</button>
+				</td>
+				<td class="price" id="price1"></td>
+			</tr>
+			
+			<tr>
+			
+				<td><img src="Images/햇반600.png"/></td>
+				<td class="unit_price">600원</td>
+				<td>
+					<button class="btn_minus">-</button>
+					<input type="text" class="qty"/>
+					<button class="btn_plus">+</button>
+				</td>
+				<td class="price" id="price2"></td>
+				
+			</tr>
+			
+			<tr>
+				<td><img src="Images/수미칩1600.png"/></td>
+				<td class="unit_price">1600원</td>
+				<td>
+					<button class="btn_minus">-</button>
+					<input type="text" class="qty"/>
+					<button class="btn_plus">+</button>
+				</td>
+				<td class="price" id="price3"></td>
+			</tr>
+			
+		</table>
+		
+		<p>총계 <span id="total_price"></span>원 </p>
+		
+	</div>
+	
+	<div>
+	
+	</div>	
+</body>
+</html>

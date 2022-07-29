@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<style>
+		table { border-collapse : collapse;}
+		table, td { border : 1px solid #afafaf;}
+		td { text-align : center;}
+	</style>
+	
+	<script>
+		function f1(){
+			document.getElementById("div1").innerHTML = 
+				"<table>"
+			+	"<tr>"
+			+	"<td>"+document.getElementById("cell_a").value+"</td>"
+			+	"<td>"+ document.getElementById("cell_b").value+"</td>"
+			+	"</tr>"
+			+	"<tr>"
+			+	"<td>"+	document.getElementById("cell_c").value+"</td>"
+			+	"<td>"+document.getElementById("cell_d").value +"</td>"
+			+	"</tr>"
+			+	"</table>";
+		}
+	</script>
+</head>
+<body>
+
+	<input type="text" id="cell_a"/>
+	<input type="text" id="cell_b"/><br/>
+	<input type="text" id="cell_c"/>
+	<input type="text" id="cell_d"/><br/>
+	<button onclick ="f1()">입력완료</button>
+	<div id="div1"></div>
+
+</body>
+</html>

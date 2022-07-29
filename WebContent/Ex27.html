@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>계산기</title>
+	
+	<script>
+		function multiply(){
+			var num1 = document.getElementById("n1").value;
+			var num2 = document.getElementById("n2").value;
+			var mul = num1*num2;
+			alert(mul);
+		}
+	</script>
+	
+</head>
+<body>
+	num1 : <input type="text" id="n1"> <br/>
+	num2 : <input type ="text" id ="n2"/> <br/>
+	<button onclick="multiply()">곱하기</button>
+</body>
+</html>

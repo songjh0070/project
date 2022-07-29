@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>계산기</title>
+</head>
+
+<script>
+
+	function plus(){
+		
+		var num1 = document.getElementById("n1").value;
+		var num2 = document.getElementById("n2").value;
+		var plus = (Number(num1)+Number(num2));
+		alert(plus);
+	}
+	function subtrack(){
+		
+		var num1 = document.getElementById("n1").value;
+		var num2 = document.getElementById("n2").value;
+		var subtrack = (Number(num1)-Number(num2));
+		alert(subtrack);
+	}
+	function mul(){
+		
+		var num1 = document.getElementById("n1").value;
+		var num2 = document.getElementById("n2").value;
+		var mul = num1*num2;
+		alert(mul);
+	}
+	function ban(){
+		
+		var num1 = document.getElementById("n1").value;
+		var num2 = document.getElementById("n2").value;
+		var ban = (Number(num1)/Number(num2));
+		alert(ban);
+	}
+	
+	/* 문제 : 정답여부를 alert로 출력하기 */
+	
+</script>
+
+<body>
+
+	num1 : <input type = "text" id="n1"><br/>
+	num2 : <input type = "text" id="n2"><br/>
+	<button onclick ="ban()">나누기</button>
+	<button onclick ="plus()">더하기</button>
+	<button onclick ="mul()">곱하기</button>
+	<button onclick ="subtrack()">빼기</button>
+
+</body>
+</html>
